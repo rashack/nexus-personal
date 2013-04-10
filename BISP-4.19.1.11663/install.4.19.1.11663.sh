@@ -151,9 +151,11 @@ then
     exit 1
   fi
 #Install plugin for FF3
-  ln -s $INSTALL_DIR/personal/libplugins.so /usr/lib/firefox-addons/plugins
-  if [ $? -ne 0 ]; then
-    echo "WARNING: Failed installing plugin for Firefox 3. Manually add symlink to libplugins.so in your Firefox 3 plugin directory if this browser is to be used."
+  if ((test -d /usr/lib/firefox-addons/plugins) && !(test -e /usr/lib/firefox-addons/plugins/libplugins.so)); then
+    ln -s $INSTALL_DIR/personal/libplugins.so /usr/lib/firefox-addons/plugins
+    if [ $? -ne 0 ]; then
+      echo "WARNING: Failed installing plugin for Firefox 3. Manually add symlink to libplugins.so in your Firefox 3 plugin directory if this browser is to be used."
+    fi
   fi
 #Install plugins for FF2
   if ((test -d /usr/lib/firefox/plugins) && !(test -e /usr/lib/firefox/plugins/libplugins.so)); then
