@@ -1,0 +1,648 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html>
+	<head>
+		<title>Hj&auml;lpavsnitt till BankID f&ouml;r Linux</title>
+	</head>
+	<body>
+		<h1>Hj&auml;lpavsnitt till BankID f&ouml;r Linux</h1>
+		<ul>
+			<li>
+				Funktioner i Programf&ouml;nstret 
+  
+			<ul>
+				<li>
+					<a href="#About_Box" target="_top">Om BankID</a>
+				<li> 
+					<a href="#Application_Window" target="_top">BankIDs Programf&ouml;nster</a>
+				<li>
+					Funktioner 
+    
+				<ul>
+					<li>
+						<a href="#Viewing_Tokens" target="_top">Visa e-legitimationer</a>
+					<li>
+						<a href="#Managing_Tokens" target="_top">Administrera e-legitimationer</a>
+					<li>
+						<a href="#Web_Browser_and_Language" target="_top">Spr&aring;kinst&auml;llningar</a>
+					</li>
+				</ul>
+				<li>
+					Hantera e-legitimationer 
+    
+				<ul>
+					<li>
+						<a href="#List_Wizard" target="_top">Visa lista med e-legitimationer</a>
+					<li>
+						<a href="#Export_Wizard" target="_top">Exportera e-legitimation</a>
+					<li>
+						<a href="#Import_Wizard" target="_top">Importera e-legitimation</a>
+					<li>
+						<a href="#PIN_Management_Wizard" target="_top">Administrera l&ouml;senord/PIN-koder</a>
+					<li>
+						<a href="#Delete_Tokens" target="_top">Ta bort e-legitimation</a>
+					</li>
+				</ul>
+					 
+				</li>
+			</ul>
+			<li>
+				Onlinefunktioner 
+  
+			<ul>
+				<li>
+					<a href="#Registration" target="_top">Registrera</a>
+				<li>
+					<a href="#User_authentication" target="_top">Legitimera</a>
+				<li>
+					<a href="#Signing_Electronic_Documents" target="_top">Underteckna elektroniskt dokument</a>
+				<li>
+					<a href="#Web_Application_Login" target="_top">Logga in p&aring; webbsida</a>
+				</li>
+			</ul>
+			<li>
+				Ordlista 
+  
+			<ul>
+				<li>
+					<a href="#Glossary" target="_top">Begreppsf&ouml;rklaringar</a>
+				</li>
+			</ul>
+				
+			</li>
+		</ul>
+		
+		<a name="About_Box">
+			<h1>Om BankID</h1>
+		
+			<p>I dialogrutan Om BankID visas versionsinformation.</p>
+			
+			<p>BankID &auml;r ett program som ger dig m&ouml;jlighet att:</p>
+			
+			<ul>
+					<li>
+						Skriva under elektroniska dokument, t.ex. e-post, 
+  bankuppgifter och viktig f&ouml;retagsinformation. 
+  
+					<li>
+						Legitimera dig mot webbservrar, f&ouml;r att komma &aring;t dina bankkonton eller intranet med hj&auml;lp av e-legitimationer lagrade p&aring; smarta kort eller som filer.
+					</li>
+			</ul>
+			
+			<p>BankID ger dig ocks&aring; m&ouml;jlighet att administrera dina e-legitimationer, t.ex. &auml;ndra l&ouml;senord/PIN-koder och exportera/importera e-legitimationer mellan olika datorer.
+			</p>
+			
+			<p>Om du beh&ouml;ver hj&auml;lp och support ut&ouml;ver vad som omfattas av det h&auml;r hj&auml;lpdokumentet ber vi dig v&auml;nligen att kontakta din leverant&ouml;r av BankID.</p>
+			
+			<p>F&ouml;r information om Technology Nexus AB, bes&ouml;k v&aring;r webbsida <a href="http://www.nexussafe.com" target="_blank">http://www.nexussafe.com</a>.</p>	
+		</a>
+		
+		<a name="Application_Window">
+			<h1>BankIDs Programf&ouml;nster</h1>
+		
+			<p>Programf&ouml;nstret i BankID:</p>
+			
+			<ul>
+					<li>
+						<a href="#Viewing_Tokens">Funktioner f&ouml;r att titta p&aring; inneh&aring;llet i dina e-legitimationer</a>. 
+  
+					<li>
+						<a href="#Managing_Tokens">Funktioner f&ouml;r att administrera e-legitimationer</a>, t.ex. att &auml;ndra l&ouml;senord/PIN-koder och att importera/exportera samt ta bort e-legitimationer.
+					</li>
+			</ul>
+		
+			<p>Funktionerna kan antingen n&aring;s via kommandon i menyerna eller via kommandon i ett terminalf&ouml;nster.</p>
+			
+			<h2>Arkiv-menyn</h2>
+			
+			<p>I Arkiv-menyn kan du avsluta programmet.</p>
+
+			<h2>Menyn Visa</h2>						<p>I menyn Visa kan du uppdatera informationen om e-ligitimationerna (t.ex. tryck p&aring; Uppdatera om &auml;ndringar har gjorts med persadm tidigare).</p>
+
+			<h2>Menyn e-legitimationer</h2>
+			
+			<p>I menyn e-legitimationer kan du visa, ta bort eller &auml;ndra l&ouml;senord/PIN-koder p&aring; dina e-legitimationer.</p>
+			
+			<h2>Hj&auml;lp-menyn</h2>
+			
+			<p>I Hj&auml;lp-menyn finns menyval d&auml;r du kommer till den h&auml;r hj&auml;lpen, kan kolla om det finns en ny programversion och visa information om BankID s&auml;kerhetsprogram.</p>
+		</a>
+		
+		<a name="Viewing_Tokens">
+			<h1>Visa e-legitimationer</h1>
+			
+			<p>N&auml;r du vill titta p&aring; certifikaten i dina e-legitimationer dubbelklickar p&aring; den 
+			e-legitimation du vill studera eller s&aring; markerar du den i listan och v&auml;ljer sedan 
+			alternativet <b>Visa</b> i menyn e-legitimation p&aring; verktygsraden.
+</p>
+			
+			<p>Beroende p&aring; e-legitimationens typ och lagring visas de p&aring; olika s&auml;tt 
+			 i programf&ouml;nstret:</p>
+			
+			<ul>
+				<li>
+					e-legitimationer som &auml;r lagrade p&aring; ett kort visas som 
+  ett smart kort. 
+  
+				<li>
+					e-legitimationer som &auml;r lagrade i filformatet BankIDs interna f&ouml;rvaring visas som dokument med h&auml;ngl&aring;s.
+				<li>
+					e-legitimationer som &auml;r lagrade i filer men inte i BankIDs interna f&ouml;rvaring visas som dokument utan h&auml;ngl&aring;s.
+				</li>
+			</ul>
+		</a>
+		
+		<a name="Managing_Tokens">
+			<h1>Administrera e-legitimationer</h1>
+		
+			<p>En e-legitimation kan inneh&aring;lla ett eller flera anv&auml;ndarcertifikat. 
+			F&ouml;rutom dessa kan det finnas ett eller flera CA-certifikat.</p>
+			
+			<p>N&auml;r du vill titta p&aring; certifikaten i dina e-legitimationer dubbelklickar p&aring; den e-legitimation 
+			du vill studera eller s&aring; markerar du den i listan och v&auml;ljer sedan alternativet <b>Visa</b> i menyn 
+			e-legitimation p&aring; verktygsraden.</p>
+			
+			<p>Genom att h&ouml;gerklicka p&aring; en e-legitimation kan du v&auml;lja att &auml;ndra l&ouml;senord, avblockera  l&ouml;senord eller ta bort e-legitimationen. </p>
+			
+			<h2>L&ouml;senord</h2>
+			
+			<p>Du kan byta l&ouml;senord p&aring; en e-legitimation och ifall du har ett smart kort
+			&auml;ven l&aring;sa upp den. Detta utf&ouml;rs genom att 
+			h&ouml;gerklicka p&aring; e-legitimationen och v&auml;lja alternativet <b>Byte av l&ouml;senord</b>
+			eller <b>L&aring;s upp PIN-kod</b>. Alternativt kan e-legitimationen markeras i listan och sedan 
+			v&auml;lja alternativet <b>Byta l&ouml;senord</b> i menyn e-legitimation p&aring; verktygsraden.</p>
+		</a>
+		
+		<a name="Web_Browser_and_Language">
+			<h1>Spr&aring;kinst&auml;llningar</h1>
+		
+			<h2>Spr&aring;k</h2>
+			
+			<p>Tillg&auml;ngliga spr&aring;k: <b>Engelska och Svenska</b></p>
+			
+			<p>Du byter spr&aring;k genom att redigera BankID s&auml;kerhetsprogram konfigurationsfil, Personal.cfg, som du t.ex. 
+			&ouml;ppnar med f&ouml;ljande kommando i ett terminalf&ouml;nster:<br><br>
+			 	
+			 	<b>$ &gt;&nbsp;gedit .personal/config/Personal.cfg</b></p>
+			 	
+			<p>
+				Vid installationen v&auml;ljs svenska automatiskt som spr&aring;k. Du byter till engelska genom att &auml;ndra 
+				f&ouml;ljande rad i Personal.cfg under sektionen [GUI]:<br><br>
+					Fr&aring;n:<br>
+				 	<b>Language=Swedish</b><br><br>
+				 	Till:<br>
+				 	<b>#Language=Swedish</b>
+			</p>
+			
+		</a>
+		
+		<a name="List_Wizard">
+			<h1>Visa lista med e-legitimationer</h1>
+		
+			<p>Starta ett nytt terminalf&ouml;nster.</p>
+			
+			<p>Starta BankIDs administrationsverktyg.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Nu visas en lista med tillg&auml;ngliga funktioner:</p>
+			
+			<p><b>list: list available tokens<br>
+			import: import a token to protected store<br>
+			export: export a token from protected store</b></p>
+			
+			<h2>Visa en lista:</h2>
+			
+			<p><b>&gt; persadm list</b></p>
+			
+			<p>En lista med installerade e-legitimationer visas, t.ex.</p>
+			
+			<p><b>Available Tokens:</p>
+			
+			<p>0: Anders Andersson	Manufacturer: Lorem Ibsum AB<br>&gt; 1: Linda Eriksson Manufacturer: Lorem Ibsum 
+AB</b></p>
+			
+		<a name="Export_Wizard">
+			<h1>Exportera e-legitimation</h1>
+		
+			<p>Starta ett nytt terminalf&ouml;nster.</p>
+	
+			<p>Starta BankIDs administrationsverktyg.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Nu visas en lista med tillg&auml;ngliga funktioner:</p>
+			
+			<p><b>list: list available tokens<br>
+			import: import a token to protected store<br>
+			export: export a token from protected store</b></p>
+		
+			<h2>Exportera:</h2>
+			
+			<p>Skriv f&ouml;ljande:</p>
+			
+			<p><b>&gt; persadm export</b></p>
+			
+			<p><b>Available Tokens:</p>
+			
+			<p>0: Anders Andersson	Manufacturer: Lorem Ibsum AB<br>&gt; 1: Linda Eriksson Manufacturer: Lorem Ibsum AB</b></p>
+			
+			<p><b>Choose token:</b> &gt;</p>
+			
+			<p>V&auml;lj den e-legitimation som du vill exportera genom att skriva dess siffra. Skriv ocks&aring; e-legitimationens l&ouml;senord/PIN-kod.</p>
+			
+			<p><b>Choose token:</b> &gt; 0<br>
+			<b>Choose PIN:</b> &gt; ****</p>
+			
+			<p>Nu skriver du s&ouml;kv&auml;gen till det USB-minne som du vill exportera till. Kom ih&aring;g att USB-minnet m&aring;ste vara anslutet innan exporten p&aring;b&ouml;rjas.</p>
+				
+			<p><b>Choose token:</b> &gt; 0<br>
+			<b>Choose PIN:</b> &gt; ****<br>
+			<b>Enter export directory (must exist):</b> &gt; /media/&lt;namn p&aring; usb-enhet&gt;</p>
+
+			<p>Om exporten har g&aring;tt bra visas det h&auml;r meddelandet:</p>
+			
+			<p><i>Successfully exported token</i></p>
+			
+			<p>Om n&aring;got fel har intr&auml;ffat visas det h&auml;r meddelandet:</p>
+			
+			<p><i>Failed to export token</i></p>
+		</a>
+		
+		<a name="Import_Wizard">
+			<h1>Importera e-legitimation</h1>
+		
+			<p>Starta ett nytt terminalf&ouml;nster.</p>
+	
+			<p>Starta BankIDs administrationsverktyg.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Nu visas en lista med tillg&auml;ngliga funktioner:</p>
+			
+			<p><b>list: list available tokens<br>
+			import: import a token to protected store<br>
+			export: export a token from protected store</b></p>
+		
+			<h2>Importera:</h2>
+	
+			<p>Skriv f&ouml;ljande:</p>
+			
+			<p><b>&gt; persadm import</b></p>
+			
+			<p>Skriv sedan s&ouml;kv&auml;gen, inklusive namnet, till den e-legitimation som du vill importera (det g&aring;r bra att importera b&aring;de fr&aring;n USB-minnen och andra enheter).</p>  
+			
+			<p><b>Enter path to token to import:</b> &gt; /media/&lt;namn p&aring; drive&gt;/Anders Andersson.nge</p>
+			
+			<p>Skriv e-legitimationens l&ouml;senord/PIN-kod.</p>
+			
+			<p><b>Enter path to token to import:</b> &gt; /media/&lt;namn p&aring; drive&gt;/Anders Andersson.nge<br>
+			<b>Enter pin:</b> &gt; ****</p>
+
+			<p>Om importen g&aring;tt bra visas f&ouml;ljande meddelande:</p>
+			
+			<p><i>Successfully imported token</i></p>
+			
+			<p>Om n&aring;got fel har intr&auml;ffat visas f&ouml;ljande meddelande:</p>
+			
+			<p><i>Failed to import token</i></p>
+			
+			<p>Om du vill verifiera att e-legitimationen har importerats kan du antingen anv&auml;nda kommandot <i>list</i> i persadm eller &ouml;ppna BankIDs programf&ouml;nster, d&auml;r den importerade e-legitimationen nu ska visas:</p>
+			
+			<p><i>Anders Andersson</i></p>
+			
+		</a>
+		
+		<a name="PIN_Management_Wizard">
+			<h1>Administrera l&ouml;senord/PIN-koder</h1>
+		
+			<p>Du administrerar l&ouml;senord/PIN-koder med alternativet <b>Byta l&ouml;senord</b> i menyn e-legitimation p&aring; 
+			verktygsraden eller med alternativet <b>Byte av l&ouml;senord</b> som visas n&auml;r du h&ouml;gerklickar p&aring; en 
+			e-legitimation.</p>
+			
+			<p>I BankID kan du byta l&ouml;senord/PIN-koder f&ouml;r s&aring;v&auml;l e-legitimationer som &auml;r lagrade p&aring; smarta kort som i 
+			filer (&auml;ven BankIDs interna f&ouml;rvaring).</p>
+			
+			<p>Du byter l&ouml;senord/PIN-koder genom att f&ouml;rst v&auml;lja en e-legitimation i listan och sedan 
+			<b>Byta l&ouml;senord</b>. I dialogrutan som visas skriver du nuvarande l&ouml;senord/PIN-kod f&ouml;ljt av det 
+			nya l&ouml;senordet/PIN-koden. Slutligen bekr&auml;ftar du det nya l&ouml;senordet/PIN-koden. </p>
+			
+			<p>PIN-koderna p&aring; smarta kort kan bli l&aring;sta om du skriver fel PIN-kod flera g&aring;nger, vanligen tre, 
+			i f&ouml;ljd.</p>
+
+			<h2>L&aring;s upp PIN</h2>
+			<p>Om fel PIN-kod anv&auml;nds vid legitimering, underskrift eller byte av PIN-kod s&aring; kan 
+			PIN-koden l&aring;sas. Om detta intr&auml;ffar m&aring;ste den l&aring;sas upp med en <a href="#PUK">PUK-kod</a> (BankID avblockeringskod).
+			</p>
+      
+      <p>Olika BankID kan ha olika metoder för att l&aring;sa upp PIN-koder.<br/> 
+      På vissa kan man göra byte av PIN-kod i samband med uppl&aring;sningen. Detta &auml;r anv&auml;ndbart om du har en <a href="#PUK">PUK-kod</a>, men har gl&ouml;mt bort PIN-koden.<br/>  
+      Andra har endast funktion för uppl&aring;sning och &aring;terst&auml;llande av PIN-koden till det den var innan den blev l&aring;st.<br/>
+      Vilka metoder som finns tillgängliga best&auml;ms av utgivaren och typen av BankID.</p>      
+
+      <p>V&auml;lj det BankID som inneh&aring;ller den PIN-kod som skall l&aring;sas upp i huvudf&ouml;nstret, h&ouml;gerklicka och v&auml;lj "L&aring;s upp PIN-kod".</p>
+
+      <p>Du kommer nu visas en dialog som inneh&aring;ller en listruta d&auml;r du v&auml;ljer den PIN-kod du vill l&aring;sa upp.<br/>
+      Dialogen avpeglar &auml;ven den uppl&aring;sningsmetod som stöds. Om ditt BankID st&ouml;djer b&aring;da metoderna (se ovan) s&aring; kan du h&auml;r v&auml;lja den metod du vill anv&auml;nda.<br/>
+
+			<p>
+      Skriv in din <a href="#PUK">PUK-kod</a>. Om PIN-koden ska bytas n&auml;r den l&aring;ses upp, beh&ouml;ver du &auml;ven ange den nya PIN-koden och bekr&auml;fta den genom att ange den en g&aring;ng till. 
+      </p>
+
+			<p>Klicka p&aring; OK f&ouml;r att genomf&ouml;ra uppl&aring;sningen.</p>
+			
+			</p>
+			
+		</a>
+		
+		<a name="Delete_Tokens">
+			<h1>Ta bort e-legitimation</h1>
+		
+			<p>Du tar bort en e-legitimation genom att markera den i listan och antingen h&ouml;gerklicka 
+			och v&auml;lja alternativet <b>Ta bort</b> eller genom att v&auml;lja alternativet <b>Ta bort</b> i menyn e-legitimation 
+			p&aring; verktygsraden.</p>
+		</a>
+		
+		<a name="Registration">
+			<h1>Registrera</h1>
+		
+			<p>Som en del av registreringsproceduren kan du bli ombedd att skriva namnet p&aring; din e-legitimation 
+			samt l&ouml;senord/PIN-kod. Namnet &auml;r vad BankID kommer att visa i listan d&auml;r du v&auml;ljer e-legitimation. 
+			L&ouml;senordet/PIN-koden anv&auml;nds f&ouml;r att skydda din e-legitimation.</p>
+		</a>
+		
+		<a name="User_authentication">
+			<h1>Legitimera</h1>
+		
+			<p>Du kan anv&auml;nda en e-legitimation till att legitimera dig n&auml;r du vill komma in p&aring; en s&auml;ker 
+			webbplats. BankID aktiveras automatiskt n&auml;r du utf&ouml;r en &aring;tg&auml;rd som kr&auml;ver legitimering. 
+			Dialogen f&ouml;r legitimering visas n&auml;r en webbplats har beg&auml;rt att du ska legitimera dig.</p>
+			
+			<p>Andra situationer som hanteras p&aring; liknande s&auml;tt &auml;r:</p>
+			
+			<ul>
+				<li>
+					n&auml;r ett smart kort ska uppdateras 
+  
+				<li>
+					n&auml;r ett annat program beg&auml;r e-legitimation.
+				</li>
+			</ul>
+			
+			<p>Beroende p&aring; typ av webbl&auml;sare blir olika funktioner aktiverade n&auml;r du beg&auml;r &aring;tkomst till en 
+			s&auml;ker webbplats, genom att t.ex. ange <i>https://&lt;webbadress&gt;</i> i adressf&auml;ltet.</p>
+			
+
+			
+			<p>Om Netscape eller en Mozilla-baserad webbl&auml;sare anv&auml;nds aktiveras BankID PKCS#11.</p>
+			
+
+			
+			<p>I allm&auml;nhet, men inte alltid, visas f&ouml;rst en dialogruta d&auml;r du v&auml;ljer en e-legitimation. 
+			D&auml;refter visas en andra dialogruta d&auml;r du skriver l&ouml;senordet/PIN-koden.</p>
+		</a>
+		
+		<a name="Signing_Electronic_Documents">
+			<h1>Underteckna elektroniskt dokument</h1>
+		
+			<p>Du skriver under ett elektroniskt dokument som visas i meddelandef&ouml;nstret genom att v&auml;lja 
+			e-legitimation, skriva l&ouml;senordet/PIN-koden och klicka p&aring; knappen <b>Jag skriver under</b>. Du kan 
+			ocks&aring; v&auml;lja att avbryta. Informationen som ska skrivas under kan eventuellt visas i ett separat 
+			f&ouml;nster. Klicka p&aring; <b>Visa</b> om du vill l&auml;sa informationen. Du kan ocks&aring; v&auml;lja att spara informationen 
+			genom att klicka p&aring; knappen <b>Spara</b>.</p>
+		</a>
+		
+		<a name="Web_Application_Login">
+			<h1>Logga in p&aring; en webbsida</h1>
+		
+			<p>N&auml;r en s&auml;ker webbplats beg&auml;r att du ska legitimera dig v&auml;ljer du f&ouml;rst en e-legitimation 
+			och skriver sedan l&ouml;senordet/PIN-koden.</p>
+			
+			<p>Se &auml;ven:</p>
+			
+			<p><a href="#User_authentication">Legitimera</a></p>
+		</a>
+		
+		<a name="Glossary">
+			<h1>Begreppsf&ouml;rklaringar</h1>
+		
+			<h4 style="FONT-WEIGHT: bold; COLOR: #0000ff">Friskrivning</h4>
+			
+			<p style="COLOR: #0000ff">Vissa termer har h&auml;mtats fr&aring;n RSA Security, Inc. och ordb&ouml;cker som &auml;r 
+			tillg&auml;ngliga p&aring; Internet, t.ex. http://www.techweb.com/encyclopedia/, http://www.webopaedia.com/ 
+			(Copyright, 2001. INT Media Group, Inc. All rights reserved.) och 
+			http://www.computeruser.com/resources/dictionary/dictionary.html. 
+			F&ouml;r dessa termer ansvarar respektive utgivare.</p>
+			
+			<h5>API</h5>
+			
+			<p>St&aring;r f&ouml;r Application Program Interface. Ett API anger vilka metoder 
+			 ett programbibliotek erbjuder ett program.</p>
+			
+			<h5>Application Program Interface</h5>
+			
+			<p>Se API. </p>
+			
+			<h5>CA</h5>
+			
+			<p>St&aring;r f&ouml;r Certifying Authority (CA) eller certifikatutf&auml;rdare. Det kan 
+			 vara vilken betrodd central administration som helst som &auml;r villig att 
+			 garantera identiteten hos dem, f&ouml;r vilka den utf&auml;rdar certifikaten, samt 
+			 certifikatens koppling till en s&auml;rskild nyckel. Det kan t.ex. vara en 
+			 statlig myndighet eller en bank.</p>
+			
+			<h5>CA certifikat</h5>
+			
+			<p>Ett certifikat f&ouml;r publika nycklar fr&aring;n en CA.</p>
+			
+			<h5>CA nyckel</h5>
+			
+			<p>Ett par RSA-nycklar som tagits fram f&ouml;r certifikatutf&auml;rdaren.</p>
+			
+			<h5>Cache</h5>
+			
+			<p>Ett tempor&auml;rt lagringsutrymme i datorminnet f&ouml;r ofta eller nyligen anv&auml;nd 
+			 information. Vad g&auml;ller webbl&auml;sars&auml;kerheten &auml;r nycklarna 'cachade'. Det 
+			 betyder att de nycklar med vilka du n&aring;r en s&auml;ker webbplats lagras tillf&auml;lligt 
+			 i minnet f&ouml;r att de ska g&aring; snabbt att h&auml;mta.</p>
+			
+			<h5>Certifikat</h5>
+			
+			<p>Ett certifikat inneh&aring;ller en unik kod f&ouml;r anv&auml;ndaren, d&auml;r huvudsyftet 
+			 &auml;r att kontrollera att en anv&auml;ndare som skickar ett meddelande &auml;r den 
+			 han eller hon utger sig f&ouml;r att vara. </p>
+			
+			<h5>Certifikatutf&auml;rdare (Certifying Authority)</h5>
+			
+			<p>Se CA</p>
+			
+			<h5>Dekryptering</h5>
+			
+			<p>Tillbaka&ouml;vers&auml;ttning av krypterade data till ursprunglig information 
+			 med ett l&ouml;senord eller en nyckel (se ocks&aring; Kryptering ).</p>
+			
+			<h5>Digitalt certifikat</h5>
+			
+			<p>Se Certifikat. </p>
+			
+			<h5>Digital signatur</h5>
+			
+			<p>En digital kod som kan l&auml;ggas till ett elektroniskt &ouml;verf&ouml;rt meddelande 
+			 och som ger en entydig identifiering av avs&auml;ndaren. </p>
+			
+			<h5>DLL</h5>
+			
+			<p>Ett bibliotek med k&ouml;rbara funktioner och data som kan anv&auml;ndas av Windows-program. 
+			 Filerna har filtill&auml;gget .DLL.</p>
+			
+			<h5>Dynamic Link Library</h5>
+			
+			<p>Se DLL. </p>
+			
+			<h5>e-legitimation</h5>
+			
+			<p>En e-legitimation kan antingen lagras p&aring; ett smart kort eller i en fil. 
+			 e-legitimationen inneh&aring;ller RSA-nycklar och ett eller flera certifikat 
+			 och som anv&auml;nds f&ouml;r kryptering och underskrift av data. Normalt kr&auml;vs 
+			 ett l&ouml;senord f&ouml;r att kunna kryptera och skriva under. Filformatet kan 
+			 antingen vara PKCS#12 eller BankID s&auml;kerhetsprogram Interna f&ouml;rvaring.</p>
+			
+			<h5>Exportera</h5>
+			
+			<p>Exportfunktionen i BankID s&auml;kerhetsprogram m&ouml;jligg&ouml;r kopiering av en e-legitimation 
+			 till en fil som kan anv&auml;ndas p&aring; en annan dator eller som s&auml;kerhetskopia. 
+			 </p>
+			
+			<h5>HTTPS</h5>
+			
+			<p>Protokollet f&ouml;r &aring;tkomst till en s&auml;ker webbserver. N&auml;r HTTPS anv&auml;nds i adressen 
+			ist&auml;llet f&ouml;r HTTP styrs meddelandet om till ett s&auml;kert portnummer ist&auml;llet f&ouml;r 
+			standardportnummer f&ouml;r webben. Uppkopplingen hanteras sedan av ett s&auml;kerhetsprotokoll.</p>
+			
+			<h5>Importera</h5>
+			
+			<p>Importfunktion i BankID s&auml;kerhetsprogram m&ouml;jligg&ouml;r kopiering av e-legitimationer 
+			 av typen PKCS#12 till BankID s&auml;kerhetsprogram interna f&ouml;rvaring. </p>
+			
+			<h5>Kort</h5>
+			
+			<p>Se Smart kort. </p>
+			
+			<h5>Kortl&auml;sare</h5>
+			
+			<p>En maskinvaruenhet som anv&auml;nds till att l&auml;sa smarta kort.</p>
+			
+			<h5>Kortl&auml;sare f&ouml;r smarta kort</h5>
+			
+			<p>En maskinvaruenhet som anv&auml;nds f&ouml;r att l&auml;sa smarta kort.</p>
+			
+			<h5>Krypterad text</h5>
+			
+			<p>Information som har krypterats och som inte kan l&auml;sas f&ouml;rr&auml;n den dekrypterats 
+			 med en nyckel. </p>
+			
+			<h5>Kryptering</h5>
+			
+			<p>&Ouml;vers&auml;ttning av data till en hemlig kod som bara kan dekrypteras (&ouml;vers&auml;ttas tillbaka till 
+			originalet) med ett l&ouml;senord eller en nyckel som normalt lagras i en e-legitimation 
+			(se ocks&aring; Dekryptering).</p>
+			
+			<h5>Legitimering av anv&auml;ndare (Client Authentication)</h5>
+			
+			<p>En process som &auml;ger rum i SSL-protokollet, d&auml;r man bekr&auml;ftar sin identitet. </p>
+			
+			<h5>L&ouml;senord (PIN kod)</h5>
+			
+			<p>PIN st&aring;r f&ouml;r BankID Identification Number. N&auml;r man vill anv&auml;nda sin e-legitimation 
+			f&ouml;r att kryptera eller skriva under data, s&aring; m&aring;ste man kunna ange l&ouml;senordet/PIN-koden 
+			i den visade dialogrutan.</p>
+			
+			<h5>BankIDs interna f&ouml;rvaring</h5>
+			
+			<p>BankID interna f&ouml;rvaring &auml;r en lagringsmetod som erbjuder en h&ouml;gre grad av s&auml;kerhet 
+			&auml;n en vanlig fil genom att filen knyts till den fysiska plats d&auml;r den &auml;r lagrad. 
+			En e-legitimation b&ouml;r importeras till denna lagringsform s&aring;vida det inte finns 
+			s&auml;rskilda sk&auml;l till att du vill att den ska lagras i en fil som kan flyttas till andra datorer.</p>
+			
+			<h5>Nyckel</h5>
+			
+			<p>En kod som anv&auml;nds f&ouml;r att dekryptera data tillbaka till ett l&auml;sbart 
+			 format.</p>
+			
+			<h5>Nyckell&auml;ngd</h5>
+			
+			<p>L&auml;ngden p&aring; RSA-nycklarna som anv&auml;nds f&ouml;r att skriva under dokument och 
+			 f&ouml;r att kryptera och dekryptera meddelanden. </p>
+			
+			<h5>Oavvislighet (Non-repudiation )</h5>
+			
+			<p>N&auml;r det g&auml;ller digital s&auml;kerhet &auml;r det h&auml;r en skyddsform som f&ouml;rs&auml;krar 
+			 att en betalning eller &ouml;verf&ouml;ring har &auml;gt rum. &Ouml;verf&ouml;ringen kan inte f&ouml;rnekas eftersom den digitala signaturen anv&auml;nts.</p>
+			
+			<h5>PKCS #7</h5>
+			
+			<p>Public Key Cryptography Standard nummer 7. Definierar en allm&auml;n syntax 
+			 f&ouml;r meddelanden som inneh&aring;ller kryptografiska enheter, t.ex. digital signatur 
+			 eller digitalt kuvert. (Definitionen har tagits fr&aring;n 'RSA Data Security, 
+			 Inc. Public-Key Cryptography Standards (PKCS)'. Copyright © 1996-1999 
+			 RSA Laboratories, en avdelning av RSA Data Security, Inc., ett Security 
+			 Dynamics-f&ouml;retag)</p>
+			
+			<h5>PKCS #11</h5>
+			
+			<p>Public Key Cryptography Standard nummer 11. Anger en API f&ouml;r enheterna 
+			 (som t.ex. smarta kort) som inneh&aring;ller kryptografisk information och genomf&ouml;r 
+			 kryptografiska funktioner. P&aring; det s&auml;ttet isoleras ett program fr&aring;n detaljer 
+			 och typ f&ouml;r den kryptografiska enheten. (Definitionen har tagits fr&aring;n 
+			 'RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)'. Copyright 
+			 © 1996-1999 RSA Laboratories, en avdelning av RSA Data Security, Inc., 
+			 ett Security Dynamics-f&ouml;retag)</p>
+			
+			<h5>PKCS #12</h5>
+			
+			<p>Public Key Cryptography Standard nummer 12. Beskriver en &ouml;verf&ouml;ringssyntax 
+			 f&ouml;r information om personidentitet och innefattar privata nycklar, certifikat, 
+			 olika hemligheter och filtill&auml;gg. Maskiner, program, webbl&auml;sare, Internet-kiosker 
+			 och s&aring; vidare som st&ouml;der den h&auml;r standarden ger anv&auml;ndaren m&ouml;jlighet att 
+			 importera, exportera och anv&auml;nda en upps&auml;ttning information om personidentitet. 
+			 (Definitionen har tagits fr&aring;n 'RSA Data Security, Inc. Public-Key Cryptography 
+			 Standards (PKCS)'. Copyright © 1996-1999 RSA Laboratories, en avdelning 
+			 av RSA Data Security, Inc., ett Security Dynamics-f&ouml;retag)</p>
+			
+			<h5>Privat nyckel</h5>
+			
+			<p>En hemlig nyckel som bara mottagaren k&auml;nner till. I ett kryptografiskt 
+			 system anv&auml;nds tv&aring; nycklar, en privat och en publik nyckel. Johan anv&auml;nder 
+			 t.ex. Jennys publika nyckel f&ouml;r att skicka ett krypterat meddelande till 
+			 henne. Jenny anv&auml;nder sin privata nyckel f&ouml;r att dekryptera det.</p>
+			
+			<h5>Publik nyckel</h5>
+			
+			<p>En nyckel som alla k&auml;nner till. I ett kryptografiskt system anv&auml;nds 
+			 tv&aring; nycklar, en privat och en publik nyckel. Johan anv&auml;nder t.ex. Jennys 
+			 publika nyckel f&ouml;r att skicka ett krypterat meddelande till henne. Jenny 
+			 anv&auml;nder sin privata nyckel f&ouml;r att dekryptera det.</p>
+			
+			<a name="PUK"><h5>PUK-kod</h5></a>
+			
+			<p>St&aring;r f&ouml;r PIN Unblocking Key, uppl&aring;sning av PIN-koden. Om en PIN-kod 
+			 har l&aring;sts p&aring; grund av f&ouml;r m&aring;nga felaktiga f&ouml;rs&ouml;k i f&ouml;ljd kan den l&aring;sas 
+			 upp med hj&auml;lp av PUK-koden (om det finns en s&aring;dan). Detta g&auml;ller bara 
+			 smarta kort.</p>
+			
+			<h5>Smart kort</h5>
+			
+			<p>En liten elektronisk enhet som &auml;r ungef&auml;r lika stor som ett kreditkort 
+			 och som inneh&aring;ller ett chip med minne. Det inneh&aring;ller RSA-nycklar och 
+			 certifikat f&ouml;r &aring;tkomst.</p>
+			
+			<h5>SSL-protokoll</h5>
+			
+			<p>Secure Socket Layer protocol, SLL-protokoll &auml;r skapat av Netscape Communications 
+			 Corporation f&ouml;r att kunna infoga datas&auml;kerhet i lager mellan programprotokollen 
+			 (som t.ex. HTTP, Telnet, NNTP eller FTP) och TCP/IP.</p>
+			
+			<p>Mer information finns i "The SSL Protocol version 3.0" (SSL-protokollet version 3.0) fr&aring;n Netscape.</p>
+		</a>
+		
+	</body>
+</html>

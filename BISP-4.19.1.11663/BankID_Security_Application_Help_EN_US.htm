@@ -1,0 +1,677 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html>
+	<head>
+		<title>BankID for Linux Help Section</title>
+	</head>
+	<body>
+		<h1>BankID for Linux Help Section</h1>
+		<ul>
+			<li>
+				BankID Security Application Window Functions 
+  
+			<ul>
+				<li>
+					<a href="#About_Box" target="_top">About BankID Security Application</a>
+				<li> 
+					<a href="#Application_Window" target="_top">Application Window</a>
+				<li>
+					Managing Tokens 
+    
+				<ul>
+					<li>
+						<a href="#Viewing_Tokens" target="_top">Viewing Tokens</a>
+					<li>
+						<a href="#Managing_Tokens" target="_top">Managing Tokens</a>
+					<li>
+						<a href="#Web_Browser_and_Language" target="_top">Language settings</a>
+					</li>
+				</ul>
+				<li>
+					Managing Tokens 
+    
+				<ul>
+					<li>
+						<a href="#List_Wizard" target="_top">List available tokens</a>
+					<li>
+						<a href="#Export_Wizard" target="_top">Export Tool</a>
+					<li>
+						<a href="#Import_Wizard" target="_top">Import Tool</a>
+					<li>
+						<a href="#PIN_Management_Wizard" target="_top">PIN Management</a>
+					<li>
+						<a href="#Delete_Tokens" target="_top">Delete token</a>
+					</li>
+				</ul>
+					 
+				</li>
+			</ul>
+			<li>
+				Online Functions 
+  
+			<ul>
+				<li>
+					<a href="#Registration" target="_top">Registration</a>
+				<li>
+					<a href="#User_authentication" target="_top">User Authentication</a>
+				<li>
+					<a href="#Signing_Electronic_Documents" target="_top">Signing Electronic Documents</a>
+				<li>
+					<a href="#Web_Application_Login" target="_top">Web Application Login</a>
+				</li>
+			</ul>
+			<li>
+				Glossary 
+  
+			<ul>
+				<li>
+					<a href="#Glossary" target="_top">Glossary</a>
+				</li>
+			</ul>
+				
+			</li>
+		</ul>
+		
+		<a name="About_Box">
+			<h1>About Box</h1>
+		
+			<p>The About Box displays version information for BankID Security Application.</p>
+			
+			<p>BankID is a software product that allows you to:</p>
+			
+			<ul>
+				<li>
+					Sign electronic documents: e.g. e-mail, bank details 
+  and important company documents 
+  
+				<li>
+					Securely authenticate yourself to Web sites: e.g. to access your bank account or intranet solutions, with a smart card or a soft token.
+				</li>
+			</ul>	
+			
+			<p>BankID also allows you to manage your digital identity tokens, in 
+			 order to change PIN codes and import/export soft tokens between different 
+			 computers. </p>
+			
+			<p>For further help and support, please refer to your BankID supplier.</p>
+			
+			<p>For information about Technology Nexus AB, please visit our Web site <a href="http://www.nexussafe.com" target="_blank">http://www.nexussafe.com</a></p>
+		</a>
+		
+		<a name="Application_Window">
+			<h1>Application Window</h1>
+		
+			<p>BankID main application window is divided into two functional areas:</p>
+			
+			<ul>
+				<li>
+					<a href="#Viewing_Tokens">Functions to view your smart cards and tokens</a>. 
+  
+				<li>
+					<a href="#Managing_Tokens">Functions to manage your tokens</a>; i.e. to change PIN and to import/export soft tokens.
+				</li>
+			</ul>	
+		
+						<p>The functions can either be reached through commands in the various menus or through the use of a special command line tool.</p>
+			
+			<h2>File Menu</h2>
+			
+			<p>The File menu allows you to close the application.</p>
+
+			<h2>View Menu</h2>						<p>From the View Menu you can refresh the Token information (i.e. click on Refresh when changes has been made by persadm earlier).</p>
+
+			
+			<h2>Token Menu</h2>
+			
+			<p>From the Token menu you can View, Delete or Change PIN of your tokens.</p>
+			
+			<h2>Help Menu</h2>
+			
+			<p>From the help menu, it is possible to get detailed help information, check for updates&nbsp;and 
+ view software version information.</p>
+		</a>
+		
+				<a name="Viewing_Tokens">
+			<h1>Viewing Tokens</h1>
+		
+			<p>To view the content of your tokens you need to select a token in the list and either double click on it
+				or by selecting View option under the Token section in the menu toolbar.</p>
+			
+			<p>Your tokens are shown in the main application window. Tokens are displayed 
+			 in different ways depending on token type and store type:</p>
+			
+			<ul>
+				<li>
+					Smart card - The token is stored on your smart card 
+  
+				<li>
+					Token stored in a file - A document with a padlock 
+  indicates that the token is stored in the Internal Store 
+  
+				<li>
+					Token stored in a file - A document without a padlock indicates that the token is stored on the computer but not stored in the Internal Store.
+				</li>
+			</ul>
+		</a>
+		
+		<a name="Managing_Tokens">
+			<h1>Managing Tokens</h1>
+		
+			<p>A token can include one or more digital certificates. Besides user certificates, 
+			there can also be one or more CA (Certification Authority) certificates.</p>
+			
+			<p> 
+			 To view the contents of a token either double click on the token in the listview or mark 
+			 a token and then select the <i>View</i> option under the Token menu in the menu toolbar.</p>
+			
+			<p>When right-clicking on the token you can also choose Delete, Change or Unblock password. </p>
+
+			<h2>Password</h2>
+			
+			<p>It is possible to change the password of your token and if you have a smart 
+			card you might also have the option to unblock your PIN. You do this by right-clicking 
+			the token or selecting the Change PIN option in the Token menu.
+			</p>
+		</a>		
+
+<a name="Web_Browser_and_Language">
+			<h1>Language settings</h1>
+		
+			<h2>Language</h2>
+			
+			<p>Available languages: <b>English and Swedish</b></p>
+			
+			<p>To change the language in BankID Security Application you need to edit the Personal.cfg configuration file that you access by writing
+				the followin in a new terminal window:<br><br>
+			 	
+			 	<b>$ &gt;&nbsp;gedit .personal/config/Personal.cfg</b></p>
+			 	
+			<p>
+				Since the default language is set to Swedish you need to change the following line in the Personal.cfg file under the [GUI]-section to enable English as the default language:<br><br>&gt; 
+					From:<br>
+				 	<b>Language=Swedish</b><br><br>
+				 	To:<br>
+				 	<b>#Language=Swedish</b>
+			</p>
+			
+		</a>					
+		
+		<a name="List_Wizard">
+			<h1>List available tokens</h1>
+		
+			<p>Start a new terminal window.</p>
+			
+			<p>Now start the admin tool.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Nu visas en lista med tillgängliga funktioner:</p>
+			
+			<p><b>list: list available tokens<br>
+			import: import a token to protected store<br>
+			export: export a token from protected store</b></p>
+			
+			<h2>List available tokens</h2>
+			
+			<p><b>&gt; persadm list</b></p>
+			
+			<p>A list with available commands and parameters will appear:</p>
+			
+			<p><b>Available Tokens:</p>
+			
+			<p>0: Anders Andersson	Manufacturer: Lorem Ibsum AB<br>&gt; 1: Linda Eriksson Manufacturer: Lorem Ibsum 
+AB</b></p>			
+				<a name="Export_Wizard">
+			<h1>Export token</h1>
+		
+			<p>Start a new terminal window.</p>
+	
+			<p>Now start the admin tool.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>A list with available commands and parameters will appear:</p>
+			
+			<p><b>list: list available tokens<br>
+			import: import a token to protected store<br>
+			export: export a token from protected store</b></p>
+			
+			<h2>Export:</h2>
+			
+			<p>To start the export of a token you write the following command:</p>
+			
+			<p><b>&gt; persadm export</b></p>
+			
+			<p><b>Available Tokens:</p>
+			
+			<p>0: John Doe	Manufacturer: Lorem Ibsum AB<br>&gt; 1: Jane Doe Manufacturer: Lorem Ibsum AB</b></p>
+			
+			<p><b>Choose token:</b> &gt;</p>
+			
+			<p>Choose the number corresponding to the token that you want to export from the list. Then you need to enter the PIN to that token.</p>
+			
+			<p><b>Choose token:</b> &gt; 0<br>
+			<b>Choose PIN:</b> &gt; ****</p>
+			
+			<p>Now enter the path to the USB drive that the token will be exported to. Remember that the drive must be initialized and exist prior to export.</p>
+			
+			
+			<p><b>Choose token:</b> &gt; 0<br>
+			<b>Choose PIN:</b> &gt; ****<br>
+			<b>Enter export directory (must exist):</b> &gt; /media/&lt;name of USB drive&gt;</p>
+			
+			<p>If the export of the token has been successful the following message will be shown:</p>
+			
+			<p><i>Successfully exported token</i></p>
+			
+			<p>If the export of the token is unsuccessful the following message will be shown:</p>
+			
+			<p><i>Failed to export token</i></p>
+		</a>
+		
+		<a name="Import_Wizard">
+			<h1>Importing tokens</h1>
+		
+			<p>Start a new terminal window.</p>
+			
+			<p>Now start the admin tool.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>A list with available commands and parameters will appear:</p>
+			
+			<p><b>list: list available tokens<br>
+			import: import a token to protected store<br>
+			export: export a token from protected store</b></p>
+			
+			<h2>Import:</h2>
+	
+			<p>To start the import of a token you write the following command:</p>
+			
+			<p><b>&gt; persadm import</b></p>
+			
+			<p>Now you enter the path, including the name, to the token that you want to import (import works from all drives visible in Linux).</p>  
+			
+			<p><b>Enter path to token to import:</b> &gt; /media/&lt;path to token&gt;/John Doe.nge</p>
+			
+			<p>You will now be prompted to enter the PIN of token intended for import:</p>
+			
+			<p><b>Enter path to token to import:</b> &gt; /media/&lt;path to token&gt;/John Doe.nge<br>
+			<b>Enter pin:</b> &gt; ****</p>
+			
+			<p>If the import was successful this message should appear:</p>
+			
+			<p><i>Successfully imported token</i></p>
+			
+			<p>If the import should fail the following error message should be shown:</p>
+			
+			<p><i>Failed to import token</i></p>
+			
+			<p>To verify that the token has in fact been imported you could either use the <i>list</i> function in the persadm-tool or you can open the BankID GUI, where your newly imported token should appear:</p>
+			
+			<p><i>John Doe Imported</i></p>
+		</a>
+		
+		<a name="PIN_Management_Wizard">
+			<h1>PIN Management</h1>
+		
+			<p>The function <i>Change PIN</i> under the Token menu in the menu toolbar or using the contextmenu option <i>Change password</i>, available when right-clicking on a token, can
+				be used to change the password of a token.</p>
+			
+			<p>In BankID you can change the PIN code(s) of smart cards and soft tokens 
+			 stored either in the Internal Store or in a file. </p>
+			
+			<p>To change the PIN code, the token must be selected in the list followed by the Change PIN or Change password option. 
+				In the follewing dialog the Old PIN followed by New PIN must be entered. You will also need to reenter the new PIN in the Confirm 
+			 new PIN text box. </p>
+			
+			<p>PIN(s) used with smart cards might become blocked if an incorrect PIN 
+			 is entered a certain number of times.</p>
+	
+			<h2>Unblock PIN</h2>
+			
+			<p>The PIN code may be blocked if the wrong PIN code is entered too many times when trying to authenticate, sign or when changing the PIN code.</p>
+						
+      <p>Different BankID's support different ways of unblocking the PIN code.<br/> 
+      Some support changing of the PIN code when unblocking the card. This is useful if you have the <a href="#PUK">PUK</a> code (BankID Unblocking Key), but have forgotten the PIN code.<br/>
+      Others only support unblocking and resetting the PIN code to whatever it was before it was blocked.<br/>
+      The methods supported are determined by the issuer and the type of BankID.</p>
+      
+      <p>Choose the BankID from the list in the main window, right click it and select "unblock PIN".</p>
+
+      <p>
+      You will be presented with a dialog that contains a dropdown box where you select the PIN code you want to unblock.<br/>
+      The dialog also reflects the unblocking method supported. If your BankID supports both methods (described above) you can choose the one you prefer.
+      </p>
+
+			Enter your <a href="#PUK">PUK</a> code (BankID Unblocking Key). If the PIN code needs to be changed when unblocking it, you also have to enter the new PIN code and confirm it by entering it again.
+      <p>Click OK to perform the unblocking operation.</p>
+		</a>
+		
+		<a name="Delete_Tokens">
+			<h1>Delete Tokens</h1>
+		
+			<p>To delete a token you need to select one in the list and then chose to right-click and select the <i>Delete</i> option in the context menu or
+				by selecting the <i>Delete</i> option under the Token menu in the manu toolbar</p>
+		</a>
+		
+		<a name="Registration">
+			<h1>Registration</h1>
+		
+			<p>As a part of a registration process, you may be asked to enter a Token 
+			 name and PIN code. The Token name will be the name that BankID displays 
+			 when the user is expected to select a token. The PIN code will be used 
+			 to protect the content of the token.</p>
+		</a>
+		
+				<a name="User_authentication">
+			<h1>User Authentication</h1>
+		
+			<p>Tokens can be used to authenticate a user to a secure Web site. BankID 
+			 is automatically activated when the user performs an action that requires 
+			 authentication, i.e., input of password. The authentication dialog is 
+			 shown whenever a user authentication has been requested by an application. 
+			 </p>
+			
+			<p>Other situations handled in a similar way occur:</p>
+			
+			<ul>
+				<li>
+					when a smart card is to be updated 
+  
+				<li>		
+					when another program requests a certificate.
+				</li>
+			</ul>
+			
+			<p>Depending on the type of web browser, different functions are invoked 
+			 when the user tries to access a secure site, e.g. when entering https://&lt;siteaddress&gt; 
+			 in the address field. </p>
+			
+			<p>If Netscape or a Mozilla-based webb browser is used, <span style="FONT-WEIGHT: bold">BankID PKCS#11</span> is invoked.</p>
+			
+			<p>Normally, but not always, the first dialog box is displayed (optionally) 
+			 and you must choose a digital certificate. Then the second dialog box 
+			 is displayed and you will have to present the PIN code.</p>
+		</a>
+
+		<a name="Signing_Electronic_Documents">
+			<h1>Signing Electronic Documents</h1>
+		
+			<p>To sign the electronic document shown in the message window, you should 
+			 select which token/certificate to use, enter the PIN code and click the 
+			 Sign button otherwise click Cancel. The data to be signed is displayed 
+			 in the signature window if displayed at all. Click the View button to 
+			 see the data to be signed in a separate window. The data may also be saved 
+			 by clicking the Save button.</p>
+		</a>
+		
+		<a name="Web_Application_Login">
+			<h1>Web Application Login</h1>
+		
+			<p>When a secure Web server requests client authentication, the user will 
+			 have to select an authentication certificate and then to present a PIN 
+			 code.</p>
+			
+			<p>Se also:</p>
+			
+			<p><a href="#User_authentication">User Authentication</a></p>
+		</a></body></html>
+
+		<a name="Glossary">
+			<h1>Glossary</h1>
+		
+			<h4 style="FONT-WEIGHT: normal; COLOR: #0000ff"><span style="FONT-WEIGHT: bold">Disclaimer</span> 
+			</h4>
+			
+			<p style="COLOR: #0000ff">Some terms were taken from RSA Security, Inc. 
+			 and computer dictionary web sites such as http://www.techweb.com/encyclopedia/, 
+			 http://www.webopaedia.com/ (Copyright, 2001. INT Media Group, Inc. All 
+			 rights reserved.), and http://www.computeruser.com/resources/dictionary/dictionary.html. 
+			 </p>
+			
+			<h5>API</h5>
+			
+			<p>Stands for Application Program Interface. An API specifies the set of 
+			 methods offered by a software library to any application. </p>
+			
+			<h5>Application Program Interface</h5>
+			
+			<p>See "API". </p>
+			
+			<h5>CA</h5>
+			
+			<p>Stands for Certification Authority. It can be any trusted central administration, 
+			 which issues certificates and that is willing to guarantee the identity 
+			 of those who receive them and their association with a given key. It can 
+			 be, for example, a government-run agency or bank. </p>
+			
+			<h5>CA Certificate</h5>
+			
+			<p>A certificate for the public key of a CA. </p>
+			
+			<h5>CA Key</h5>
+			
+			<p>RSA key pair generated for the CA. </p>
+			
+			<h5>Cache</h5>
+			
+			<p>A temporary storage area for frequently or recently accessed data. In 
+			 terms of browser security, the keys are "cached". This means 
+			 that those keys that allow you to access secure servers are temporarily 
+			 stored in memory for easy retrieval. </p>
+			
+			<h5>Card</h5>
+			
+			<p>See "Smart Card". </p>
+			
+			<h5>Card Reader</h5>
+			
+			<p>A hardware device used to read smart cards. </p>
+			
+			<h5>Cipher Text</h5>
+			
+			<p>Data that has been encrypted and is unreadable until it has been decrypted 
+			 with a key. </p>
+			
+			<h5>Certificate</h5>
+			
+			<p>A certificate is equivalent to a digital identification card and contains 
+			 a unique code for the specified user, where the main purpose is to verify 
+			 that the user sending a message is the one he or she claims to be. </p>
+			
+			<h5>Certification Authority</h5>
+			
+			<p>See "CA". </p>
+			
+			<h5>Client Authentication</h5>
+			
+			<p>The process of verifying a claimed identity, via the protocol SSL. </p>
+			
+			<h5>Cryptography</h5>
+			
+			<p>The act of transforming data (see "Encryption") into an unreadable 
+			 format. The only way to read the data is by possessing a secret key, which 
+			 is usually stored in a token (see also "Token") </p>
+			
+			<h5>Decryption</h5>
+			
+			<p>The translation of encrypted data back to its original data by way of 
+			 using a password or key (see also "Encryption"). </p>
+			
+			<h5>Digital Certificate</h5>
+			
+			<p>See "Certificate". </p>
+			
+			<h5>Digital Identity Token</h5>
+			
+			<p>A digital identity token is either a smart card or a soft token that 
+			 can be used to prove the identity of user. </p>
+			
+			<h5>Digital Signature</h5>
+			
+			<p>A digital code that can be attached to an electronically transmitted 
+			 message that uniquely identifies the sender. </p>
+			
+			<h5>DLL</h5>
+			
+			<p>A library of executable functions or data that can be used by a Windows 
+			 application. The files are denoted with a .DLL extension. </p>
+			
+			<h5>Dynamic Link Library</h5>
+			
+			<p>See "DLL". </p>
+			
+			<h5>Encryption</h5>
+			
+			<p>The translation of data to a secret code that can only be decrypted 
+			 (or translated back to original data) and read by the use of a password 
+			 or a key (see also "Decryption"). </p>
+			
+			<h5>Export</h5>
+			
+			<p>The Export function allows you to copy your token to a file in order 
+			 to use the token in another computer or to backup the file for safe keeping.</p>
+			
+			<h5>HTTPS</h5>
+			
+			<p>The protocol for accessing a secure Web server. Using HTTPS in the URL 
+			 instead of HTTP directs the message to a secure port number rather than 
+			 the default Web port number. The session is then managed by a security 
+			 protocol. </p>
+			
+			<h5>Import</h5>
+			
+			<p>The Import function in BankID allows you to import your PKCS#12 digital 
+			 identity tokens into the Internal Store. </p>
+			
+			<h5>Internal Store</h5>
+			
+			<p>The Internal Store is a Trusted Store offering a higher level of security 
+			 than a regular file. Soft tokens should thus be imported into the Trusted 
+			 Store unless the higher flexibility of a regular file is needed, e.g. 
+			 when moving the file with the soft token between computers.</p>
+			
+			<h5>Key</h5>
+			
+			<p>A string of bits used widely in cryptography, allowing people to encrypt 
+			 and decrypt data. </p>
+			
+			<h5>Key Length</h5>
+			
+			<p>The length of the RSA keys used for actions such as signing, encrypting 
+			 and decrypting messages. </p>
+			
+			<h5>Non-repudiation</h5>
+			
+			<p>In terms of digital security, this is a form of protection that secures 
+			 that a payment or transaction has occurred. The transaction cannot be 
+			 falsely denied due to the use of a digital signature. </p>
+			
+			<h5>BankID Identification Number Code</h5>
+			
+			<p>See "PIN Code". </p>
+			
+			<h5>PIN Code</h5>
+			
+			<p>Stands for BankID Identification Number code. When using a token to 
+			 encrypt or digitally sign data, you enter your PIN in a dialog box to 
+			 initiate the encryption or attach your digital certificate to the data. 
+			 </p>
+			
+			<h5>PIN Unblocking Key Code</h5>
+			
+			<p>See "PUK Code". </p>
+			
+			<h5>PKCS #7</h5>
+			
+			<p>Public Key Cryptography Standard Number 7. Defines a general syntax 
+			 for messages including cryptographic elements, e.g., digital signatures 
+			 and digital envelopes. (Definition taken from "RSA Data Security, 
+			 Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 
+			 RSA Laboratories, a division of RSA Data Security, Inc., a Security Dynamics 
+			 Company) </p>
+			
+			<h5>PKCS #11</h5>
+			
+			<p>Public Key Cryptography Standard Number 11. Specifies a generic API 
+			 to devices (such as smart cards) that hold cryptographic information and 
+			 perform cryptographic functions. Thereby, it isolates an application from 
+			 the details and type of the cryptographic device. (Definition taken from 
+			 "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". 
+			 Copyright © 1996-1999 RSA Laboratories, a division of RSA Data Security, 
+			 Inc., a Security Dynamics Company) </p>
+			
+			<h5>PKCS #12</h5>
+			
+			<p>Public Key Cryptography Standard Number 12. Describes a transfer syntax 
+			 for personal identity information, and includes private keys, certificates, 
+			 miscellaneous secrets, and extensions. Machines, applications, browsers, 
+			 Internet kiosks, and so on, that support this standard will allow a user 
+			 to import, export, and exercise a single set of personal identity information. 
+			 (Definition taken from "RSA Data Security, Inc. Public-Key Cryptography 
+			 Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, a division 
+			 of RSA Data Security, Inc., a Security Dynamics Company) </p>
+			
+			<h5>Public Key</h5>
+			
+			<p>A key that is known by everyone. In a cryptographic system, two keys 
+			 are used, a private and public key. For example, John uses Jane's public 
+			 key to send her an encrypted email. Jane uses a private key to decrypt 
+			 it. </p>
+			
+			<a name="PUK"><h5>PUK Code</h5></a>
+			
+			<p>Stands for PIN Unblocking Key. If a PIN code has been blocked due to 
+			 too many attempts, it can be unblocked using the PUK code (if available). 
+			 </p>
+			
+			<h5>Private Key</h5>
+			
+			<p>A secret key that is only known by the recipient. In a cryptographic 
+			 system, two keys are used, a private and public key. For example, John 
+			 uses Jane's public key to send her an encrypted e-mail. Jane uses a private 
+			 key to decrypt it. </p>
+			
+			<h5>Smart Card</h5>
+			
+			<p>A small electronic device about the size of a credit card which contains 
+			 an embedded chip with memory. It contains the RSA keys and certificate(s) 
+			 needed to authenticate oneself to secure websites and to electronically 
+			 sign documents. </p>
+			
+			<h5>Smart Card Reader</h5>
+			
+			<p>A hardware device that is used to access the smart card</p>
+			
+			<h5>Soft Token</h5>
+			
+			<p>See "Software Token". </p>
+			
+			<h5>Software Token</h5>
+			
+			<p>A computer file (as opposed to a smart card) that contains one or more 
+			 than one pair of RSA keys and and certificates that are used for encrypting 
+			 or digitally signing data. When encrypting or signing, you are required 
+			 to enter a PIN code. In BankID the file format can be PKCS#12 or the 
+			 Internal store.</p>
+			
+			<h5>SSL Protocol</h5>
+			
+			<p>Secure Socket Layer protocol designed and specified by Netscape Communications 
+			 Corporation to provide data security layered between application protocols 
+			 (such as HTTP, Telnet, NNTP, or FTP) and TCP/IP. </p>
+			
+			<p>See "The SSL Protocol version 3.0" from Netscape for more 
+			 information. </p>
+			
+			<h5>Token</h5>
+			
+			<p>A token can either be a card (otherwise known as a "Smart Card") 
+			 or a software file (otherwise known as "Software Token") that 
+			 contains the RSA keys and certificate(s) used for signing or decrypting 
+			 data. When encrypting or signing, you are usually required to enter a 
+			 PIN code. </p>
+		</a>
+		
+	</body>
+</html>

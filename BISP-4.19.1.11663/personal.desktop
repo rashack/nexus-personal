@@ -1,0 +1,16 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Comment=BankID Security Application
+Comment[sv_SE]=BankID säkerhetsprogram
+Encoding=UTF-8
+Exec=/usr/local/bin/personal
+GenericName=BankID Security Application
+GenericName[sv_SE]=BankID säkerhetsprogram
+Icon=/usr/local/lib/personal/icons/nexus_logo_32x32.png
+Icon[sv_SE]=/usr/local/lib/personal/icons/nexus_logo_32x32.png
+Name=BankID Security Application
+Name[sv_SE]=BankID säkerhetsprogram
+Terminal=false
+Type=Application
+Version=1.0

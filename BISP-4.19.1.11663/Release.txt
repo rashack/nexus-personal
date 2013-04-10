@@ -1,0 +1,386 @@
+﻿================================================================================
+
+        BankID Security Application for Linux
+        Version 4.19.1
+        RELEASE.TXT
+
+================================================================================
+
+================================================================================
+
+  General Information
+
+================================================================================
+
+This is a BankID Security Application Online release which also includes some
+BankID Security Application Enterprise functionalities. In future releases,
+the Online and Enterprise editions will be released independently whereby
+separating the Online and Enterprise functionalities.
+
+Due to the modular installation packaging of BankID Security Application;
+functionalities, language and smart card support is dependant on the package
+that is being used. This release file describes all the functionalities that
+are available if you have the full installation package of BankID Security
+Application.
+
+================================================================================
+
+  What's New in this Release
+
+================================================================================
+--------------------------------------------------------------------------------
+New Functionality
+--------------------------------------------------------------------------------
+Warning for expiring/expired certificates
+-----------------------------------------
+Added visual representation in the GUI to notify users of expired certificates 
+and certificates that are about to expire.
+
+================================================================================
+
+  BankID Security Application 4.19.0
+
+================================================================================
+--------------------------------------------------------------------------------
+New Functionality
+--------------------------------------------------------------------------------
+
+Oberthür Authentic 3 card support.
+----------------------------------
+BankID Security application now has support for the Oberthür Authentic 3 card.
+
+--------------------------------------------------------------------------------
+Corrected Problems
+--------------------------------------------------------------------------------
+
+Add RegUtil dialog text.
+---------------------------
+Added PIN policy text to the RegUtil dialog.
+
+================================================================================
+
+  BankID Security Application 4.18.1
+
+================================================================================
+
+--------------------------------------------------------------------------------
+New Functionality
+--------------------------------------------------------------------------------
+
+New Language Support
+--------------------
+Support for Norwegian, Finnish and Danish has been introduced.
+
+--------------------------------------------------------------------------------
+Corrected Problems
+--------------------------------------------------------------------------------
+
+Prisma PKI+ smart cards
+-----------------------
+This card type now works in all scenarios, but with some limitations when
+using the nonrepudiation key in some specific PKCS#11 scenarios.
+
+================================================================================
+
+  BankID Security Application 4.18.0
+
+================================================================================
+
+New platform support:
+--------------------------------------------------------------------------------
+ - Ubuntu 10.10
+
+Support for new browsers
+------------------------
+- Firefox 3.6.15
+
+Smart card reader support
+-------------------------
+Vasco DIGIPASS 920. Wysiwys (What you see is what you sign) is not supported,
+only normal pin-pad functionality.
+
+Smart card support
+------------------
+NXP JCOP with CryptoTech Applet v1.12
+ST Microelectronics Prisma with PKI PLUS applet/agent
+Gemalto Optelio with Gemalto Classic V3 Applet
+
+PIN feature priorities
+----------------------
+PIN features can be set in both in the PKCS#15 profile and configured using the
+PinManagement parameter. In this version the PinManagement parameter has 
+precedence over the AODF as long as the card library supports the feature. This
+is reflected in the GUI.
+
+Enhanced certificate filtering for browser plugins
+--------------------------------------------------
+The certificate filtering algorithm for WebSigner, Authentication and Signer2 
+plugins have been enhanced with respect to how "Issuers", "Subjects" and 
+"Policys" are combined. The latter not available to WebSigner plugin. "Subjects" 
+and "Issuers" can now also contain regular expressions using '*', '?' and '\'.
+
+================================================================================
+
+  BankID Security Application 4.17.0
+
+================================================================================
+
+New platform support:
+--------------------------------------------------------------------------------
+ - Ubuntu 10.04
+
+Update functionality
+--------------------------------------------------------------------------------
+It is possible to check for updates and view software version information.
+
+--------------------------------------------------------------------------------
+Corrected Problems
+--------------------------------------------------------------------------------
+
+Formatting of BCD-coded PIN codes
+--------------------------------------------------------------------------------
+A bug where BCD coded PIN codes got truncated has now been fixed. 
+
+================================================================================
+
+  BankID Security Application 4.15.0
+
+================================================================================
+
+New platform support:
+--------------------------------------------------------------------------------
+ - Ubuntu 9.10
+
+New browser support:
+--------------------------------------------------------------------------------
+ - Firefox 3.6
+
+CCID pinpad detection
+--------------------------------------------------------------------------------
+An update to the CCID driver package made it difficult for BankID Security
+Application to distinguish between pinpad and regular card readers. This issue
+has been fixed in this release.
+
+CBT bridging support removed
+--------------------------------------------------------------------------------
+Previous versions supported updating of cbt tokens and related properties and
+.krg files to keep the tokens compatible with the cbt application.
+This support has now been removed.
+
+================================================================================
+
+  BankID Security Application 4.10.2
+
+================================================================================
+--------------------------------------------------------------------------------
+New Functionality
+--------------------------------------------------------------------------------
+
+Support for GUI dialogs in PKCS#11 module
+-----------------------------------------
+
+Support for PIN-pad card readers
+--------------------------------
+Readers which are compatible with PC/SC 2.01 are supported.
+
+Feedback about Remaining PIN Attempts
+-------------------------------------
+When a smart card user enters an incorrect PIN during login, the PIN error
+counter is decreased. The error message now reflects how many attempts are left
+before the PIN gets blocked (if supported by the card operating system).
+
+Enhanced Support for Most Recently Used Token in Authentication and Signer2
+Plug-ins
+--------------------------------------------------------------------------------
+The support for most recently used token has been changed so that the token
+used for authentication in Authentication plug-in is now automatically selected
+in the Signer2 plug-in and vice versa. It is also possible to configure
+Registration Utility to register an enrolled token as most recently used.
+
+Possibility to Configure Trace Level
+------------------------------------
+It is now possible to configure BankID Security Application to trace in
+different levels.
+
+Resizable Signer2 Dialog
+------------------------
+
+Refreshing the main application
+-------------------------------
+It is now possible to click "Refresh" in the View menu in order to update
+BankID Security Application with the latest tokens. This is typically needed
+after using the Import console function in order to update the main GUI
+application.
+
+--------------------------------------------------------------------------------
+Corrected Problems
+--------------------------------------------------------------------------------
+
+Corrections to the Technical Description document
+-------------------------------------------------
+Some errors in the Linux-specific documentation have been fixed.
+
+================================================================================
+
+  Known Limitations
+
+================================================================================
+
+PKCS#11 module GUI language support
+------------------------------------
+You will only be able to enter standard ASCII characters in the PKCS#11 dialog
+password field in this release (e.g öäå/ÖÄÅ will not work).
+
+Export and Import
+------------------
+The command-line utility persadm for export and import will not work properly
+if the BankID Security Application main application is not started at least
+once before.
+
+================================================================================
+
+  BankID Security Application 4.10.0
+
+================================================================================
+
+--------------------------------------------------------------------------------
+New Functionality
+--------------------------------------------------------------------------------
+
+GUI Administration support added for tokens and smart cards
+-----------------------------------------------------------
+
+Plug-ins support added
+----------------------
+
+Language Support
+----------------
+Swedish and English languages are supported.
+
+
+Browser Support
+---------------
+Firefox 3.0.6
+
+
+================================================================================
+
+  Platform Support
+
+================================================================================
+
+The following platforms are supported:
+
+- Ubuntu 8.0.4
+
+================================================================================
+
+  PC/SC Readers
+
+================================================================================
+
+The following readers have been verfied to work with BankID Security Application
+
+- Omnikey CardMan 3121
+- ToDos Argos Mini II
+- Gemalto GemPC Twin
+
+================================================================================
+
+  Soft Token Format
+
+================================================================================
+
+This version supports the following Soft Token format:
+
+- PKCS#12 - Supports private keys encrypted with symmetric key
+            generated from PIN (RC2, RC4 and 3DES).
+
+================================================================================
+
+  Smart Card Support
+
+================================================================================
+
+- Setec SetCOS v4.3.1 16K
+- SetAccess IS 4.4.1 a/b (formerly known as Setec SetCOS v4.4.1 and Setec
+  Instant EID)
+- Schlumberger Prisma EP v1.0 Calc 2.1
+- Siemens CardOS M4.01
+- Siemens CardOS M4.01a
+- Siemens CardOS V4.2
+- Siemens cardOS V4.2b
+- Siemens CardOS V4.3
+- Siemens CardOS V4.3b
+- NXP JCOP with CryptoTech Applet v1.12
+
+================================================================================
+
+  Smart Card Profiles
+
+================================================================================
+
+-SEIS S1 v2 (PKCS#15)
+-PKCS#15 (version 1.0)
+-PKCS#15 (version 1.1)
+-PKCS#15 FINEID
+
+================================================================================
+
+  Known Limitations
+
+================================================================================
+
+Always logged in mode
+---------------------
+P11_AlwaysLoggedInMode=1 is not supported in this release since this requires
+a GUI. This version of BankID Security Application does not contain any GUI in
+the PKCS#11 module.
+
+Limited use of hash functions when signing with smart cards
+-----------------------------------------------------------
+Depending on the properties of a specific smart card, only a subset of the
+supported hash algorithms might be valid when creating digital signatures.
+The limitation can either be inherent in the card or a result of how private
+keys on the card are configured (what profile the card is initialized with).
+Limitations are usually relevant when using the non-repudiation key for signing.
+Following is a list of the cards where limitations apply and what types of
+hashes they support. Cards that are not mentioned work with all the hash
+algorithms supported by BankID Security Application.
+
+StarCOS SPK 2.3  - MD5, SHA1, RipeMD160
+Orga Micardo 2.1 - MD5, SHA1, SHA224, RipeMD128, RipeMD160
+TCOS 2.0 R3      - MD5, SHA1, SHA224, RipeMD128, RipeMD160
+
+Siemens CardOS M4.x - Using hash algorithms other than SHA1 can fail, depending
+                      on how the card was configured when it was initialized.
+                      This problem can theoretically be solved through
+                      configuration, which will be supported in a future
+                      release of BankID Security Application.
+
+Swedish characters åäö in CBT token name
+----------------------------------------------
+Old CBT tokens from Windows with åäö in the token name is not supported.
+
+Export and Import
+------------------------------
+The Export and Import functions are accessable through the commandline only,
+see the Help file for detailed instructions.
+
+
+================================================================================
+
+Please report any problems directly to the supplier of your
+Nexus product. Development, maintenance and support of Nexus
+PKI products are managed by Technology Nexus AB.
+http://www.nexussafe.com/
+
+To provide feedback about our products or to suggest product
+enhancements, please send an e-mail to
+contact@nexussafe.com
+
+Technology Nexus AB
+Årstaängsvägen 19 B
+P.O. Box 47057
+100 74 Stockholm
+SWEDEN

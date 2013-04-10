@@ -1,0 +1,540 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html>
+	<head>
+		<title>Hjelp til BankID for Linux</title>
+	</head>
+	<body>
+		<h1>Hjelp til BankID for Linux</h1>
+		<ul>
+			<li>
+				Funksjoner i BankID-sikkerhetsprogramvinduet 
+  
+			<ul>
+				<li>
+					<a href="#About_Box" target="_top">Om BankID-sikkerhetsprogrammet</a>
+				<li> 
+					<a href="#Application_Window" target="_top">Programvindu</a>
+				<li>
+					Administrere token 
+    
+				<ul>
+					<li>
+						<a href="#Viewing_Tokens" target="_top">Vise token</a>
+					<li>
+						<a href="#Managing_Tokens" target="_top">Administrere token</a>
+					<li>
+						<a href="#Web_Browser_and_Language" target="_top">Språkinnstillinger</a>
+					</li>
+				</ul>
+				<li>
+					Administrere token 
+    
+				<ul>
+					<li>
+						<a href="#List_Wizard" target="_top">Liste over tilgjengelige token</a>
+					<li>
+						<a href="#Export_Wizard" target="_top">Eksportverktøy</a>
+					<li>
+						<a href="#Import_Wizard" target="_top">Importverktøy</a>
+					<li>
+						<a href="#PIN_Management_Wizard" target="_top">PIN-administrasjon</a>
+					<li>
+						<a href="#Delete_Tokens" target="_top">Slett token</a>
+					</li>
+				</ul>
+					 
+				</li>
+			</ul>
+			<li>
+				Nettbaserte funksjoner 
+  
+			<ul>
+				<li>
+					<a href="#Registration" target="_top">Registrering</a>
+				<li>
+					<a href="#User_authentication" target="_top">Brukergodkjenning</a>
+				<li>
+					<a href="#Signing_Electronic_Documents" target="_top">Signere elektroniske dokumenter</a>
+				<li>
+					<a href="#Web_Application_Login" target="_top">Pålogging av webprogram</a>
+				</li>
+			</ul>
+			<li>
+				Ordliste 
+  
+			<ul>
+				<li>
+					<a href="#Glossary" target="_top">Ordliste</a>
+				</li>
+			</ul>
+				
+			</li>
+		</ul>
+		
+		<a name="About_Box">
+			<h1>Om-dialogboksen</h1>
+		
+			<p>Om-dialogboksen viser versjonsinformasjon om BankID-sikkerhetsprogrammet.</p>
+			
+			<p>BankID er et programprodukt du kan bruke til å:</p>
+			
+			<ul>
+				<li>
+					Signere elektroniske dokumenter: f.eks. e-post, bankopplysninger og viktige jobbdokumenter 
+  
+				<li>
+					Sørge for sikker godkjenning på nettsteder: f.eks. for å få tilgang til bankkonto eller intranettløsninger ved hjelp av smartkort eller programvaretoken.
+				</li>
+			</ul>	
+			
+			<p>Ved hjelp av BankID kan du også administrere digitale identitetstoken, slik at du kan endre PIN-koder og importere/eksportere programvaretoken mellom forskjellige datamaskiner. </p>
+			
+			<p>Ta kontakt med din BankID-leverandør for å få mer hjelp og assistanse.</p>
+			
+			<p>Besøk vårt nettsted på <a href="http://www.nexussafe.com" target="_blank">http://www.nexussafe.com</a> for å få mer informasjon om Technology Nexus AB.</p>
+		</a>
+		
+		<a name="Application_Window">
+			<h1>Programvindu</h1>
+		
+			<p>BankIDs hovedvindu er delt inn i to funksjonsområder:</p>
+			
+			<ul>
+				<li>
+					<a href="#Viewing_Tokens">Funksjoner for å vise smartkort og token</a>. 
+  
+				<li>
+					<a href="#Managing_Tokens">Funksjoner for å administrere token</a>, dvs. endre PIN-kode og importere/eksportere token.
+				</li>
+			</ul>	
+		
+						<p>Funksjonene kan enten aktiveres via kommandoer på forskjellige menyer eller ved bruk av et spesielt kommandolinjeverktøy.</p>
+			
+			<h2>Fil-menyen</h2>
+			
+			<p>Fil-menyen gjør det mulig å lukke programmet.</p>
+
+			<h2>Vis-menyen</h2>						<p>På Vis-menyen kan du oppdatere tokeninformasjon (dvs. klikke på Oppdater når endringer har blitt gjort av persadm tidligere).</p>
+
+			
+			<h2>Token-menyen</h2>
+			
+			<p>På Token-menyen kan du vise, slette eller endre PIN-koden til token.</p>
+			
+			<h2>Hjelp-menyen</h2>
+			
+			<p>På Hjelp-menyen er det mulig å få detaljert hjelp, se etter oppdateringer&nbsp;og vise informasjon om programvareversjonen.</p>
+		</a>
+		
+				<a name="Viewing_Tokens">
+			<h1>Vise token</h1>
+		
+			<p>Hvis du vil se innholdet i token, må du velge et token på listen og enten dobbeltklikke på det eller velge Vis-alternativet under Token på menyverktøylinjen.</p>
+			
+			<p>Dine token vises i hovedprogramvinduet. Token vises på forskjellig måte, avhengig av type token og hvor de er lagret:</p>
+			
+			<ul>
+				<li>
+					Smartkort - Tokenet er lagret på smartkortet 
+  
+				<li>
+					Token lagret i en fil - Et dokument med hengelås indikerer at tokenet er lagret i internlageret 
+  
+				<li>
+					Token lagret i en fil - Et dokument uten hengelås indikerer at tokenet er lagret på datamaskinen, men ikke i internlageret
+				</li>
+			</ul>
+		</a>
+
+<a name="Managing_Tokens">
+			<h1>Administrere token</h1>
+		
+			<p>Et token kan inkludere ett eller flere digitale sertifikater. I tillegg til brukersertifikater kan det også være ett eller flere CA-sertifikater (Certification Authority = sertifiseringsmyndighet).</p>
+			
+			<p> 
+			 Hvis du vil se innholdet i et token, må du enten dobbeltklikke på tokenet i listen eller merke tokenet og velge <i>Vis</i>-alternativet under Token på menyverktøylinjen.</p>
+			
+			<p>Hvis du høyreklikker på tokenet, kan du også velge Slett eller Endre passord. </p>
+			
+			<h2>Passord</h2>
+			
+			<p>Det er også mulig å endre passordet til tokenet. Du gjør det ved å høyreklikke eller velge Endre PIN-kode fra Token-menyen. Administrasjonsveiviser.</p>
+		</a>		
+
+<a name="Web_Browser_and_Language">
+			<h1>Språkinnstillinger</h1>
+		
+			<h2>Språk</h2>
+			
+			<p>Tilgjengelige språk: <b>Engelsk og svensk</b></p>
+			
+			<p>Hvis du vil bytte språk i BankID-sikkerhetsprogrammet, må du redigere konfigurasjonsfilen Personal.cfg, som du åpner ved å skrive følgende i et nytt terminalvindu:<br><br>
+			 	
+			 	<b>$ &gt;&nbsp;gedit .personal/config/Personal.cfg</b></p>
+			 	
+			<p>
+				Fordi standardspråket er satt til svensk, må du endre denne linjen under [GUI] i Personal.cfg-filen for å aktivere engelsk som standardspråk:<br><br>&gt; Fra:<br> <b>Language=Swedish</b><br><br> Til:<br> <b>#Language=Swedish</b>
+			</p>
+			
+		</a>					
+		
+		<a name="List_Wizard">
+			<h1>Liste over tilgjengelige token</h1>
+		
+			<p>Start et nytt terminalvindu.</p>
+			
+			<p>Start deretter admin-verktøyet.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Nå vises en liste over tilgjengelige funksjoner:</p>
+			
+			<p><b>list: liste over tilgjengelige token<br> import: importer et token til det beskyttede lageret<br> export: eksporter et token fra det beskyttede lageret</b></p>
+			
+			<h2>Liste over tilgjengelige token</h2>
+			
+			<p><b>&gt; persadm list</b></p>
+			
+			<p>En liste over tilgjengelige kommandoer og parametere vises:</p>
+			
+			<p><b>Tilgjengelige token:</p>
+			
+			<p>0: Anders Andersson	Produsent: Lorem Ibsum AB<br>&gt; 1: Linda Eriksson Produsent: Lorem Ibsum AB</b></p>			
+				<a name="Export_Wizard">
+			<h1>Eksporter token</h1>
+		
+			<p>Start et nytt terminalvindu.</p>
+	
+			<p>Start deretter admin-verktøyet.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>En liste over tilgjengelige kommandoer og parametere vises:</p>
+			
+			<p><b>list: liste over tilgjengelige token<br> import: importer et token til det beskyttede lageret<br> export: eksporter et token fra det beskyttede lageret</b></p>
+			
+			<h2>Eksporter:</h2>
+			
+			<p>Når du skal eksportere et token, skriver du denne kommandoen:</p>
+			
+			<p><b>&gt; persadm export</b></p>
+			
+			<p><b>Tilgjengelige token:</p>
+			
+			<p>0: John Doe	Produsent: Lorem Ibsum AB<br>&gt; 1: Jane Doe Produsent: Lorem Ibsum AB</b></p>
+			
+			<p><b>Velg token:</b> &gt;</p>
+			
+			<p>Velg tallet som tilsvarer tokenet du vil eksportere fra listen. Deretter må du oppgi PIN-koden til dette tokenet.</p>
+			
+			<p><b>Velg token:</b> &gt; 0<br> <b>Velg PIN-kode:</b> &gt; ****</p>
+			
+			<p>Nå oppgir du banen til USB-stasjonen som tokenet skal eksporteres til. Husk at stasjonen må finnes og være klargjort før eksporten kan utføres.</p>
+			
+			
+			<p><b>Velg token:</b> &gt; 0<br> <b>Velg PIN-kode:</b> &gt; ****<br> <b>Oppgi eksportkatalog (må finnes):</b> &gt; /media/&lt;navn på USB-stasjon&gt;</p>
+			
+			<p>Hvis eksporten av tokenet er vellykket, vises denne meldingen:</p>
+			
+			<p><i>Tokenet er eksportert</i></p>
+			
+			<p>Hvis eksporten av tokenet er mislykket, vises denne meldingen:</p>
+			
+			<p><i>Fikk ikke eksportert tokenet</i></p>
+		</a>
+		
+		<a name="Import_Wizard">
+			<h1>Importere token</h1>
+		
+			<p>Start et nytt terminalvindu.</p>
+			
+			<p>Start deretter admin-verktøyet.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>En liste over tilgjengelige kommandoer og parametere vises:</p>
+			
+			<p><b>list: liste over tilgjengelige token<br> import: importer et token til det beskyttede lageret<br> export: eksporter et token fra det beskyttede lageret</b></p>
+			
+			<h2>Importer:</h2>
+	
+			<p>Når du skal importere et token, skriver du denne kommandoen:</p>
+			
+			<p><b>&gt; persadm import</b></p>
+			
+			<p>Nå oppgir du banen, inkludert navnet, til tokenet du vil importere (import fungerer fra alle stasjoner som er synlige i Linux).</p>  
+			
+			<p><b>Oppgi banen til tokenet som skal importeres.</b> &gt; /media/&lt;bane til token&gt;/John Doe.nge</p>
+			
+			<p>Du vil nå bli bedt om å oppgi PIN-koden til tokenet som skal importeres:</p>
+			
+			<p><b>Oppgi banen til tokenet som skal importeres.</b> &gt; /media/&lt;bane til token&gt;/John Doe.nge<br> <b>Oppgi PIN-kode:</b> &gt; ****</p>
+			
+			<p>Hvis importen er vellykket, vises denne meldingen:</p>
+			
+			<p><i>Tokenet er importert</i></p>
+			
+			<p>Hvis importen er mislykket, vises denne meldingen:</p>
+			
+			<p><i>Fikk ikke importert tokenet</i></p>
+			
+			<p>Hvis du vil kontrollere at tokenet faktisk er importert, kan du enten bruke <i>list</i>-funksjonen i persadm-verktøyet eller du kan åpne BankID-grensesnittet, der det nylig importerte tokenet skal vises:</p>
+			
+			<p><i>John Doe importert</i></p>
+		</a>
+		
+				<a name="PIN_Management_Wizard">
+			<h1>PIN-administrasjon</h1>
+		
+			<p>Funksjonen <i>Endre PIN-kode</i> under Token på menyverktøylinjen eller hurtigmenyalternativet <i>Endre passord</i> som er tilgjengelig ved høyreklikking på et token, kan brukes til å endre passordet til et token.</p>
+			
+			<p>I BankID kan du endre PIN-koden(e) til smartkort og programvaretoken som er lagret enten i internlageret eller i en fil. </p>
+			
+			<p>Hvis du skal endre en PIN-kode, må du velge tokenet på listen og deretter alternativet Endre PIN-kode eller Endre passord. I dialogen nedenfor må den gamle PIN-koden etterfulgt av den nye PIN-koden oppgis. Du må også gjenta den nye PIN-koden i feltet Bekreft ny PIN-kode. </p>
+			
+			<p>PIN-koder som brukes sammen med smartkort, kan bli blokkert hvis feil PIN-kode blir brukt et antall ganger.</p>
+	
+	<h2>Opphev blokkering av PIN-kode</h2>
+
+	<p>PIN-koden kan bli blokkert hvis feil PIN-kode oppgis for mange ganger ved forsøk på godkjenning, signering eller ved endring av PIN-koden.</p>
+	<p>Velg PIN-koden som du må oppheve blokkering av, fra rullegardinlisten. I motsetning til når du endrer PIN-koder, er det ikke mulig å oppheve blokkering av alle PIN-koder samtidig.</p>
+
+
+<p>Oppgi PUK-koden (BankID Unblocking Key) hvis du har valgt <strong>Opphev blokkering med PUK-kode og angi ny PIN-kode</strong>. Oppgi den nye PIN-koden og bekreft den nye PIN-koden i tekstfeltene, og klikk deretter på <strong>Angi ny PIN-kode</strong>. Hvis du har valgt <strong>Opphev blokkering med PUK-kode</strong>, oppgir du PUK-koden og klikker på <strong>Opphev blokkering av PIN-kode</strong></a>
+		
+				<a name="Delete_Tokens">
+			<h1>Slett token</h1>
+		
+			<p>Hvis du vil slette et token, må du velge det på listen og deretter høyreklikke og velge <i>Slett</i>-alternativet fra hurtigmenyen eller <i>Slett</i>-alternativet under Token på menyverktøylinjen.</p>
+		</a>
+		
+		<a name="Registration">
+			<h1>Registrering</h1>
+		
+			<p>Som en del av registreringsprosessen kan du bli bedt om å oppgi et tokennavn og en PIN-kode. Tokennavnet vil være det navnet BankID viser når det forventes at brukeren skal velge et token. PIN-koden brukes for å beskytte innholdet i tokenet.</p>
+		</a>
+		
+				<a name="User_authentication">
+			<h1>Brukergodkjenning</h1>
+		
+			<p>Token kan brukes til å godkjenne brukere for sikre nettsteder. BankID blir automatisk aktivert når en bruker utfører en handling som krever godkjenning, dvs. må oppgi et passord. Godkjenningsdialogboksen blir vist hver gang et program har bedt om brukergodkjenning. 
+			 </p>
+			
+			<p>Andre situasjoner som håndteres på liknende måte er:</p>
+			
+			<ul>
+				<li>
+					når et smartkort må oppdateres 
+  
+				<li>		
+					når et annet program ber om et sertifikat
+				</li>
+			</ul>
+			
+			<p>Avhengig av type nettleser, blir forskjellige funksjoner aktivert når en bruker forsøker å få tilgang til et sikkert nettsted, f.eks. hvis han eller hun skriver https://&lt;nettadresse&gt; i adressefeltet. </p>
+			
+			<p>Hvis Netscape eller en Mozilla-basert nettleser brukes, startes <span style="FONT-WEIGHT: bold">BankID PKCS#11</span>.</p>
+			
+			<p>Vanligvis, men ikke alltid, vises den første dialogboksen, og du må velge et digitalt sertifikat. Deretter vises den andre dialogboksen, og du må oppgi PIN-koden.</p>
+		</a>
+
+		<a name="Signing_Electronic_Documents">
+			<h1>Signere elektroniske dokumenter</h1>
+		
+			<p>Når du skal signere det elektroniske dokumentet som vises i meldingsvinduet, velger du hvilket token eller sertifikat som skal brukes, oppgir PIN-koden og klikker på Signer. Hvis ikke, klikk på Avbryt. Dataene som skal signeres, vises i signaturvinduet hvis de i det hele tatt vises. Klikk på Vis for å se dataene som skal signeres i et eget vindu. Dataene kan også lagres ved å klikke på Lagre.</p>
+		</a>
+		
+		<a name="Web_Application_Login">
+			<h1>Pålogging av webprogram</h1>
+		
+			<p>Når en sikker webserver ber om klientgodkjenning, må brukeren velge et godkjenningssertifikat og deretter oppgi en PIN-kode.</p>
+			
+			<p>Se også:</p>
+			
+			<p><a href="#User_authentication">Brukergodkjenning</a></p>
+		</a></body></html>
+
+		<a name="Glossary">
+			<h1>Ordliste</h1>
+		
+			<h4 style="FONT-WEIGHT: normal; COLOR: #0000ff"><span style="FONT-WEIGHT: bold">Ansvarsfraskrivelse</span> 
+			</h4>
+			
+			<p style="COLOR: #0000ff">Enkelte termer er hentet fra RSA Security, Inc. og dataterminologinettsteder som http://www.techweb.com/encyclopedia/, http://www.webopaedia.com/ (Copyright, 2001. INT Media Group, Inc. Med enerett.) og http://www.computeruser.com/resources/dictionary/dictionary.html. 
+			 </p>
+			
+			<h5>API</h5>
+			
+			<p>Står for Application Program Interface (programgrensesnitt). Et API angir et sett med metoder som et programbibliotek gir et program. </p>
+			
+			<h5>Application Program Interface</h5>
+			
+			<p>Se "API". </p>
+			
+			<h5>BankID Identification Number-kode</h5>
+			
+			<p>Se "PIN-kode". </p>
+			
+			<h5>CA</h5>
+			
+			<p>Står for Certification Authority (sertifiseringsmyndighet). Det kan være en hvilken som helst klarert sentral administrasjon som utsteder sertifikater, og som er villig til å garantere identiteten til dem som mottar dem og deres tilknytning til en gitt nøkkel. Det kan for eksempel være en offentlig instans eller en bank. </p>
+			
+			<h5>CA-nøkkel</h5>
+			
+			<p>RSA-nøkkelpar som er generert for sertifiseringsmyndigheten (CA). </p>
+			
+			<h5>CA-sertifikat</h5>
+			
+			<p>Et sertikat for den offentlige nøkkelen til en sertifiseringsmyndighet (CA). </p>
+			
+			<h5>chiffertekst</h5>
+			
+			<p>Data som er kryptert og som er uleselige inntil de blir dekryptert med en nøkkel. </p>
+			
+			<h5>dekryptering</h5>
+			
+			<p>Oversettingen av krypterte data tilbake til de opprinnelige dataene ved hjelp av et passord eller en nøkkel (se også "kryptering"). </p>
+			
+			<h5>digital signatur</h5>
+			
+			<p>En digital kode som kan knyttes til en elektronisk overført melding, og som entydig identifiserer avsenderen. </p>
+			
+			<h5>digitalt identitetstoken</h5>
+			
+			<p>Et digitalt identitetstoken er enten et smartkort eller et programvaretoken som kan brukes til å bekrefte identiteten til en bruker. </p>
+			
+			<h5>digitalt sertifikat</h5>
+			
+			<p>Se "sertifikat". </p>
+			
+			<h5>DLL</h5>
+			
+			<p>Et bibliotek av utførbare funksjoner eller data som kan brukes av et Windows-program. Slike filer har filtypen .DLL. </p>
+			
+			<h5>Dynamic Link Library</h5>
+			
+			<p>Se "DLL". </p>
+			
+			<h5>Eksporter</h5>
+			
+			<p>Ved hjelp av eksportfunksjonen kan du kopiere et token til en fil for å bruke det på en annen datamaskin eller sikkerhetskopiere filen på et trygt sted.</p>
+			
+			<h5>HTTPS</h5>
+			
+			<p>Protokollen for tilgang til sikre webservere. Bruk av HTTPS i URL-adresser i stedet for HTTP styrer meldingen til et sikkert webportnummer i stedet for til standardportnummeret. Økten håndteres deretter av en sikkerhetsprotokoll. </p>
+			
+			<h5>hurtigbuffer</h5>
+			
+			<p>Et midlertidig lagringsområde for hyppig eller nylig brukte data. Når det gjelder nettlesersikkerhet, blir nøklene "hurtigbufret". Det betyr at nøklene som gir deg tilgang til sikre servere, blir lagret midlertidig i minnet for rask gjenfinning. </p>
+			
+			<h5>ikke-benekting</h5>
+			
+			<p>Når det gjelder digital sikkerhet, er dette en form for beskyttelse som sikrer at en betaling eller transaksjon er utført. Transaksjonen kan ikke uriktig benektes fordi det er brukt en digital signatur. </p>
+			
+			<h5>Importer</h5>
+			
+			<p>Importfunksjonen i BankID gir deg mulighet til å importere digitale PKCS#12-identitetstoken til internlageret. </p>
+			
+			<h5>internlager</h5>
+			
+			<p>Internlageret er et klarert lager som gir en høyere grad av sikkerhet enn en vanlig fil. Programvaretoken bør derfor importeres til det klarerte lageret hvis ikke den høyere fleksibiliteten til en vanlig fil er nødvendig, f.eks. ved flytting av filen med programvaretokenet mellom datamaskiner.</p>
+			
+			<h5>klientgodkjenning</h5>
+			
+			<p>Prosessen med å bekrefte en påberopt identitet via protokollen SSL. </p>
+			
+			<h5>kort</h5>
+			
+			<p>Se "smartkort". </p>
+			
+			<h5>kortleser</h5>
+			
+			<p>En maskinvareenhet som brukes til å lese smartkort. </p>
+			
+			<h5>kryptering</h5>
+			
+			<p>Oversetting av data til en hemmelig kode som bare kan dekrypteres (eller oversettes tilbake til de opprinnelige dataene) og leses ved hjelp av et passord eller en nøkkel (se også "dekryptering"). </p>
+			
+			<h5>kryptografi</h5>
+			
+			<p>Prosessen med å omgjøre data (se "kryptering") til et uleselig format. Den eneste muligheten til å lese dataene er ved hjelp av en hemmelig nøkkel, som vanligvis oppbevares i et token (se også "token"). </p>
+			
+			<h5>nøkkel</h5>
+			
+			<p>En bitstreng som er mye brukt innen kryptografi, og som gjør det mulig å kryptere og dekryptere data. </p>
+			
+			<h5>nøkkellengde</h5>
+			
+			<p>Lengden på RSA-nøklene som brukes til handlinger som signering, kryptering og dekryptering av meldinger. </p>
+			
+			<h5>offentlig nøkkel</h5>
+			
+			<p>En nøkkel som alle kjenner. I kryptografiske systemer benyttes to nøkler, en privat og en offentlig nøkkel. Jon bruker for eksempel Hannes offentlige nøkkel til å sende henne kryptert e-post. Hanne bruker en privat nøkkel til å dekryptere e-posten. </p>
+			
+			<h5>PIN Unblocking Key-kode</h5>
+			
+			<p>Se "PUK-kode". </p>
+			
+			<h5>PIN-kode</h5>
+			
+			<p>Står for BankID Identification Number-kode (personlig identifikasjonsnummer). Når du bruker et token til å kryptere eller signere data digitalt, oppgir du PIN-koden i en dialogboks for å starte kryptering eller knytte ditt digitale sertifikat til dataene. 
+			 </p>
+			
+			<h5>PKCS #7</h5>
+			
+			<p>Public Key Cryptography Standard nummer 7 (offentlig nøkkelkryptografistandard). Definerer en generell syntaks for meldinger, inkludert kryptografiske elementer, f.eks. digitale signaturer og digitale konvolutter. (Definisjon hentet fra "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, en avdeling i RSA Data Security, Inc., et Security Dynamics-selskap) </p>
+			
+			<h5>PKCS #11</h5>
+			
+			<p>Public Key Cryptography Standard nummer 11 (offentlig nøkkelkryptografistandard). Angir et generisk API for enheter (for eksempel smartkort) som inneholder kryptografisk informasjon og utfører kryptografiske funksjoner. Dermed isolerer det programmet fra detaljene og type kryptografisk enhet. (Definisjon hentet fra "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, en avdeling i RSA Data Security, Inc., et Security Dynamics-selskap) </p>
+			
+			<h5>PKCS #12</h5>
+			
+			<p>Public Key Cryptography Standard nummer 12 (offentlig nøkkelkryptografistandard). Beskriver en overføringssyntaks for personlig identifikasjonsinformasjon, og inkluderer private nøkler, sertifikater, diverse hemmeligheter og utvidelser. Maskiner, programmer, nettlesere, Internett-kiosker og så videre som støtter denne standarden, gjør det mulig for en bruker å importere, eksportere og bruke ett enkelt sett med personlig identifikasjonsinformasjon. (Definisjon hentet fra "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, en avdeling i RSA Data Security, Inc., et Security Dynamics-selskap) </p>
+			
+			<h5>privat nøkkel</h5>
+			
+			<p>En hemmelig nøkkel som bare mottakeren kjenner. I kryptografiske systemer benyttes to nøkler, en privat og en offentlig nøkkel. Jon bruker for eksempel Hannes offentlige nøkkel til å sende henne kryptert e-post. Hanne bruker en privat nøkkel til å dekryptere e-posten. </p>
+			
+			<h5>programtoken</h5>
+			
+			<p>Se "programvaretoken". </p>
+			
+			<h5>programvaretoken</h5>
+			
+			<p>En datafil (i motsetning til et smartkort) som inneholder et eller flere par med RSA-nøkler og sertifikater som brukes til kryptering og digital signering av data. Ved kryptering og signering må du oppgi en PIN-kode. I BankID kan filformatet være PKCS#12 eller internlageret.</p>
+			
+			<h5>PUK-kode</h5>
+			
+			<p>Står for PIN Unblocking Key. Hvis en PIN-kode er blokkert på grunn av for mange forsøk, kan blokkeringen oppheves ved hjelp av PUK-koden (hvis den er tilgjengelig). 
+			 </p>
+			
+			<h5>sertifikat</h5>
+			
+			<p>Et sertifikat tilsvarer et digitalt identifikasjonskort og inneholder en unik kode for den aktuelle brukeren. Formålet er å bekrefte at brukeren som sender en melding, er den han eller hun utgir seg for å være. </p>
+			
+			<h5>sertifiseringsmyndighet</h5>
+			
+			<p>Se "CA". </p>
+			
+			<h5>smartkort</h5>
+			
+			<p>En liten elektronisk enhet omtrent på størrelse med et kredittkort, som har en innebygd brikke med minne. Det inneholder RSA-nøkler og et eller flere sertifikater som kreves for godkjenning på sikre nettsteder og for å signere dokumenter elektronisk. </p>
+			
+			<h5>smartkortleser</h5>
+			
+			<p>En maskinvareenhet som brukes til å få tilgang til smartkort.</p>
+			
+			<h5>SSL-protokoll</h5>
+			
+			<p>Secure Socket Layer-protokollen ble utviklet og spesifisert av Netscape Communications Corporation for å sørge for datasikkerhet mellom programprotokoller (som HTTP, Telnet, NNTP og FTP) og TCP/IP. </p>
+			
+			<p>Se "SSL-protokoll, versjon 3.0" fra Netscape for å få mer informasjon. </p>
+			
+			<h5>token</h5>
+			
+			<p>Et token kan enten være et kort (også kjent som "smartkort") eller en programvarefil (også kjent som "programvaretoken") som inneholder RSA-nøklene og sertifikatet eller sertifikatene som brukes til signering eller dekryptering av data. Ved kryptering og signering må du vanligvis oppgi en PIN-kode. </p>
+		</a>
+		
+	</body>
+</html>

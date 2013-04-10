@@ -1,0 +1,541 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html>
+	<head>
+		<title>BankID for Linux -Ohje-osa</title>
+	</head>
+	<body>
+		<h1>BankID for Linux -Ohje-osa</h1>
+		<ul>
+			<li>
+				BankID-tietoturvasovellusikkunan toiminnot 
+  
+			<ul>
+				<li>
+					<a href="#About_Box" target="_top">Tietoja BankID-tietoturvasovelluksesta</a>
+				<li> 
+					<a href="#Application_Window" target="_top">Sovellusikkuna</a>
+				<li>
+					Tunnisteiden hallinta 
+    
+				<ul>
+					<li>
+						<a href="#Viewing_Tokens" target="_top">Tunnisteiden tarkasteleminen</a>
+					<li>
+						<a href="#Managing_Tokens" target="_top">Tunnisteiden hallinta</a>
+					<li>
+						<a href="#Web_Browser_and_Language" target="_top">Kieliasetukset</a>
+					</li>
+				</ul>
+				<li>
+					Tunnisteiden hallinta 
+    
+				<ul>
+					<li>
+						<a href="#List_Wizard" target="_top">Käytettävissä olevien tunnisteiden näyttäminen</a>
+					<li>
+						<a href="#Export_Wizard" target="_top">Vientityökalu</a>
+					<li>
+						<a href="#Import_Wizard" target="_top">Tuontityökalu</a>
+					<li>
+						<a href="#PIN_Management_Wizard" target="_top">PIN-koodin hallinta</a>
+					<li>
+						<a href="#Delete_Tokens" target="_top">Tunnisteen poistaminen</a>
+					</li>
+				</ul>
+					 
+				</li>
+			</ul>
+			<li>
+				Internet-toiminnot 
+  
+			<ul>
+				<li>
+					<a href="#Registration" target="_top">Rekisteröinti</a>
+				<li>
+					<a href="#User_authentication" target="_top">Käyttäjien todennus</a>
+				<li>
+					<a href="#Signing_Electronic_Documents" target="_top">Sähköisten asiakirjojen allekirjoittaminen</a>
+				<li>
+					<a href="#Web_Application_Login" target="_top">Web-sovellukseen kirjautuminen</a>
+				</li>
+			</ul>
+			<li>
+				Sanasto 
+  
+			<ul>
+				<li>
+					<a href="#Glossary" target="_top">Sanasto</a>
+				</li>
+			</ul>
+				
+			</li>
+		</ul>
+		
+		<a name="About_Box">
+			<h1>Tietoja-ruutu</h1>
+		
+			<p>Tietoja-ruudussa on BankID-tietoturvasovelluksen versiotiedot.</p>
+			
+			<p>BankID on ohjelmistotuote, jonka avulla voit</p>
+			
+			<ul>
+				<li>
+					allekirjoittaa sähköisiä asiakirjoja, kuten sähköposteja, pankkitietoja ja tärkeitä yritysasiakirjoja 
+  
+				<li>
+					todentaa henkilöllisyytesi Web-sivustoihin turvallisesti eli esimerkiksi käyttää Internet-pankkia tai intranet-ratkaisuja älykortilla tai ohjelmistotunnisteella.
+				</li>
+			</ul>	
+			
+			<p>BankID-ohjelman avulla voit myös hallita digitaalisia henkilöllisyystunnisteita. Näin voit muuttaa PIN-koodeja ja tuoda ja viedä ohjelmistotunnisteita eri tietokoneiden välillä. </p>
+			
+			<p>Jos tarvitset lisäohjeita tai tukea, ota yhteys BankID-ohjelmiston toimittajaasi.</p>
+			
+			<p>Lisätietoja Technology Nexus AB:sta on verkkosivustossa <a href="http://www.nexussafe.com" target="_blank">http://www.nexussafe.com.</a></p>
+		</a>
+		
+		<a name="Application_Window">
+			<h1>Sovellusikkuna</h1>
+		
+			<p>BankID:n pääsovellusikkuna on jaettu kahteen toimintoalueeseen:</p>
+			
+			<ul>
+				<li>
+					<a href="#Viewing_Tokens">Toiminnot, joilla voi tarkastella älykortteja ja tunnisteita</a>. 
+  
+				<li>
+					<a href="#Managing_Tokens">Toiminnot, joilla voi hallita tunnisteita</a>, kuten muuttaa PIN-koodia ja viedä tai tuoda ohjelmistotunnisteita.
+				</li>
+			</ul>	
+		
+						<p>Voit käyttää toimintoja komennoilla eri valikoissa tai erityisellä komentorivityökalulla.</p>
+			
+			<h2>Tiedosto-valikko</h2>
+			
+			<p>Tiedosto-valikossa voit sulkea sovelluksen.</p>
+
+			<h2>Näytä-valikko</h2>						<p>Näytä-valikon avulla voit päivittää tunnistetiedot (esimerkiksi napsauttamalla Päivitä-komentoa, kun muutoksia on tehty aiemmin persadm-työkalulla).</p>
+
+			
+			<h2>Tunniste-valikko</h2>
+			
+			<p>Tunniste-valikon avulla voit näyttää, poistaa tai muuttaa tunnisteiden PIN-koodeja.</p>
+			
+			<h2>Ohje-valikko</h2>
+			
+			<p>Ohje-valikon avulla voit hakea yksityiskohtaisia ohjeita, päivityksiä ja ohjelmistoversion tietoja.</p>
+		</a>
+		
+				<a name="Viewing_Tokens">
+			<h1>Tunnisteiden tarkasteleminen</h1>
+		
+			<p>Voit tarkastella tunnisteiden sisältöä valitsemalla tunnisteen luettelosta ja kaksoisnapsauttamalla sitä tai valitsemalla työkalurivin Tunniste-osasta Näytä-vaihtoehdon.</p>
+			
+			<p>Tunnisteesi näytetään ohjelman pääikkunassa. Tunnisteet näytetään eri tavoilla sen mukaan, mikä tunnisteen tyyppi ja tallennustyyppi on kyseessä:</p>
+			
+			<ul>
+				<li>
+					Älykortti: tunniste on tallennettu älykortille. 
+  
+				<li>
+					Tiedostoon tallennettu tunniste: asiakirja, jossa näkyy munalukko, ilmaisee, että tunniste on tallennettu sisäiseen säilöön. 
+  
+				<li>
+					Tiedostoon tallennettu tunniste: asiakirja, jossa näkyy munalukko, ilmaisee, että tunniste on tallennettu tietokoneeseen, mutta ei sisäiseen säilöön.
+				</li>
+			</ul>
+		</a>
+
+<a name="Managing_Tokens">
+			<h1>Tunnisteiden hallinta</h1>
+		
+			<p>Tunniste voi sisältää useita digitaalisia sertifikaatteja. Käyttäjäsertifikaattien lisäksi käytössä voi olla myös ainakin yksi CA (Certification Authority) -sertifikaatti.</p>
+			
+			<p> 
+			 Voit tarkastella tunnisteen sisältöä kaksoisnapsauttamalla tunnistetta luettelonäkymässä tai valitsemalla tunnisteen ja valitsemalla sitten työkalurivin Tunniste-osasta <i>Näytä</i>-vaihtoehdon.</p>
+			
+			<p>Voit käyttää Poista salasana- tai Vaihda salasana -komentoa napsauttamalla tunnistetta hiiren kakkospainikkeella. </p>
+			
+			<h2>Salasana</h2>
+			
+			<p>Voit muuttaa tunnisteen salasanan. Suorita toiminto napsauttamalla tunnistetta hiiren kakkospainikkeella tai valitsemalla Tunniste-valikosta Muuta PIN-koodia -vaihtoehto. Ohjattu hallintatoiminto.</p>
+		</a>		
+
+<a name="Web_Browser_and_Language">
+			<h1>Kieliasetukset</h1>
+		
+			<h2>Kieli</h2>
+			
+			<p>Käytettävissä olevat kielet: <b>englanti ja ruotsi</b></p>
+			
+			<p>Voit muuttaa BankID-tietoturvasovelluksen kieliasetusta muokkaamalla Personal.cfg-konfigurointitiedostoa, jonka voit avata kirjoittamalla uuteen pääteikkunaan seuraavan tekstin:<br><br>
+			 	
+			 	<b>$ &gt;&nbsp;gedit .personal/config/Personal.cfg</b></p>
+			 	
+			<p>
+				Oletusasetuksena on ruotsi, jonka tilalle voit vaihtaa englannin muuttamalla Personal.cfg-tiedoston [GUI]-osassa seuraavaa riviä:<br><br>&gt; Muodosta:<br> <b>Language=Swedish</b><br><br> Muotoon:<br> <b>#Language=Swedish</b>
+			</p>
+			
+		</a>					
+		
+		<a name="List_Wizard">
+			<h1>Käytettävissä olevien tunnisteiden näyttäminen</h1>
+		
+			<p>Käynnistä uusi pääteikkuna.</p>
+			
+			<p>Käynnistä hallintatyökalu.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Näyttöön tulee luettelo käytettävissä olevista toiminnoista:</p>
+			
+			<p><b>näytä: näytä käytettävissä olevat tunnisteet<br> tuo: tuo tunniste suojattuun säilöön<br> vie: vie tunniste suojatusta säilöstä</b></p>
+			
+			<h2>Käytettävissä olevien tunnisteiden näyttäminen</h2>
+			
+			<p><b>&gt; persadm list</b></p>
+			
+			<p>Näyttöön tulee luettelo käytettävissä olevista komennoista ja parametreista:</p>
+			
+			<p><b>Käytettävissä olevat tunnisteet:</p>
+			
+			<p>0: Anders Andersson	Valmistaja: Lorem Ibsum AB<br>&gt; 1: Linda Eriksson Valmistaja: Lorem Ibsum AB</b></p>			
+				<a name="Export_Wizard">
+			<h1>Vie tunniste</h1>
+		
+			<p>Käynnistä uusi pääteikkuna.</p>
+	
+			<p>Käynnistä hallintayökalu.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Näyttöön tulee luettelo käytettävissä olevista komennoista ja parametreista:</p>
+			
+			<p><b>näytä: näytä käytettävissä olevat tunnisteet<br> tuo: tuo tunniste suojattuun säilöön<br> vie: vie tunniste suojatusta säilöstä</b></p>
+			
+			<h2>Vie:</h2>
+			
+			<p>Käynnistä tunnisteen vienti kirjoittamalla seuraava komento:</p>
+			
+			<p><b>&gt; persadm export</b></p>
+			
+			<p><b>Käytettävissä olevat tunnisteet:</p>
+			
+			<p>0: John Doe	Valmistaja: Lorem Ibsum AB<br>&gt; 1: Jane Doe Valmistaja: Lorem Ibsum AB</b></p>
+			
+			<p><b>Valitse tunniste:</b> &gt;</p>
+			
+			<p>Valitse numero, joka vastaa luettelosta vietävää tunnistetta. Lisää sen jälkeen PIN-koodi tunnukseen.</p>
+			
+			<p><b>Valitse tunniste:</b> &gt; 0<br> <b>Valitse PIN:</b> &gt; ****</p>
+			
+			<p>Lisää USB-aseman, johon tunniste viedään, hakupolku. Aseman on oltava alustettuna ja luotuna ennen vientiä.</p>
+			
+			
+			<p><b>Valitse tunniste:</b> &gt; 0<br> <b>Valitse PIN:</b> &gt; ****<br> <b>Lisää vientihakemisto (pakollinen):</b> &gt; /tietoväline/&lt;USB-aseman nimi&gt;</p>
+			
+			<p>Jos tunnisteen vienti onnistuu, näyttöön tulee seuraava viesti:</p>
+			
+			<p><i>Tunnisteen vienti onnistui</i></p>
+			
+			<p>Jos tunnisteen vienti epäonnistuu, näyttöön tulee seuraava viesti:</p>
+			
+			<p><i>Tunnisteen vienti epäonnistui.</i></p>
+		</a>
+		
+		<a name="Import_Wizard">
+			<h1>Tunnisteiden tuominen</h1>
+		
+			<p>Käynnistä uusi pääteikkuna.</p>
+			
+			<p>Käynnistä hallintayökalu.</p>
+			
+			<p><b>&gt; persadm</b></p>
+			
+			<p>Näyttöön tulee luettelo käytettävissä olevista komennoista ja parametreista:</p>
+			
+			<p><b>näytä: näytä käytettävissä olevat tunnisteet<br> tuo: tuo tunniste suojattuun säilöön<br> vie: vie tunniste suojatusta säilöstä</b></p>
+			
+			<h2>Tuo:</h2>
+	
+			<p>Käynnistä tunnisteen tuonti kirjoittamalla seuraava komento:</p>
+			
+			<p><b>&gt; persadm import</b></p>
+			
+			<p>Kirjoita tuotavan tunnisteen hakupolku mukaan lukien nimi (tuonti onnistuu kaikista Linuxissa näkyvistä asemista).</p>  
+			
+			<p><b>Kirjoita tuotavan tunnisteen hakupolku:</b> &gt; /tietoväline/&lt;tunnisteen hakupolku&gt;/John Doe.nge</p>
+			
+			<p>Näyttöön tulee kehotus kirjoittaa tuotavan tunnisteen PIN-koodi:</p>
+			
+			<p><b>Kirjoita tuotavan tunnisteen hakupolku:</b> &gt; /tietoväline/&lt;tunnisteen polku&gt;/John Doe.nge<br> <b>Kirjoita PIN:</b> &gt; ****</p>
+			
+			<p>Jos tuonti onnistuu, näyttöön pitäisi tulla seuraava viesti:</p>
+			
+			<p><i>Tunnisteen tuonti onnistui</i></p>
+			
+			<p>Jos tuonti epäonnistuu, näyttöön pitäisi tulla seuraava virheviesti:</p>
+			
+			<p><i>Tunnisteen tuonti epäonnistui.</i></p>
+			
+			<p>Voit tarkistaa, että tunniste on todella tuotu käyttämällä persadm-työkalun <i>list</i>-toimintoa tai avaamalla BankID GUI -käyttöliittymän, jossa juuri tuomasi tunnisteen pitäisi näkyä:</p>
+			
+			<p><i>John Doe tuotu</i></p>
+		</a>
+		
+				<a name="PIN_Management_Wizard">
+			<h1>PIN-koodin hallinta</h1>
+		
+			<p>Voit muuttaa tunnisteen salasanan käyttämällä työkalurivin Tunniste-valikossa olevaa <i>Muuta PIN-koodia</i> -toimintoa tai napsauttamalla tunnistetta hiiren kakkospainikkeella ja valitsemalla pikavalikosta <i>Vaihda salasana</i> -vaihtoehdon.</p>
+			
+			<p>BankID:ssä voit muuttaa älykorttien ja sisäiseen säilöön tai tiedostoon tallennettujen ohjelmistotunnisteiden PIN-koodeja. </p>
+			
+			<p>Kun haluat muuttaa PIN-koodia, valitse tunniste luettelosta, joka avautuu Muuta PIN-koodia- tai Vaihda salasana -vaihtoehdon valinnan jälkeen. Kirjoita avautuvaan valintaikkunaan vanha PIN-koodi ja sen jälkeen uusi PIN-koodi. Tämän jälkeen uusi PIN-koodi pitää vielä kirjoittaa Vahvista uusi PIN-koodi -ruutuun. </p>
+			
+			<p>Älykorteissa käytettyjen PIN-koodien käyttö saatetaan estää, jos väärä PIN-koodi määritetään liian monta kertaa.</p>
+	
+	<h2>Poista PIN-koodin esto</h2>
+
+	<p>PIN-koodin käyttö voidaan estää, jos väärä PIN-koodi määritetään liian monta kertaa todennuksen, allekirjoituksen tai PIN-koodin vaihdon aikana.</p>
+	<p>Valitse avattavasta luettelosta PIN-koodi, jonka eston haluat poistaa. Kaikkien PIN-koodien eston poistaminen ei onnistu yhdellä kertaa, toisin kuin niiden muuttaminen.</p>
+
+
+<p>Kirjoita PUK-koodisi (BankID Unblocking Key eli BankID:n eston torjunta-avain), jos olet valinnut vaihtoehdon <strong>Poista esto PUK-koodilla ja aseta uusi PIN-koodi</strong>, kirjoita uusi PIN-koodi, vahvista uusi PIN-koodi tekstikentissä ja valitse <strong>Aseta uusi PIN-koodi</strong>. Jos olet valinnut vaihtoehdon <strong>Poista esto PUK-koodilla</strong>, kirjoita PUK-koodi ja valitse sitten <strong>Poista PIN-koodin esto</strong></a>
+		
+				<a name="Delete_Tokens">
+			<h1>Tunnisteiden poistaminen</h1>
+		
+			<p>Voit poistaa tunnisteen valitsemalla sen luettelosta ja napsauttamalla sitten tunnistetta hiiren kakkospainikkeella ja valitsemalla pikavalikosta <i>Poista</i>-vaihtoehdon tai valitsemalla työkalurivin Tunniste-valikosta <i>Poista</i>-vaihtoehdon.</p>
+		</a>
+		
+		<a name="Registration">
+			<h1>Rekisteröinti</h1>
+		
+			<p>Sinua saatetaan rekisteröintiprosessin osana pyytää kirjoittamaan tunnisteen nimi ja PIN-koodi. Tunnisteen nimi on nimi, jonka BankID näyttää, kun käyttäjän on tarkoitus valita tunniste. PIN-koodia käytetään tunnisteen sisällön suojaamiseen.</p>
+		</a>
+		
+				<a name="User_authentication">
+			<h1>Käyttäjien todennus</h1>
+		
+			<p>Tunnisteita voi käyttää käyttäjän henkilöllisyyden todentamiseen suojatussa Web-sivustossa. BankID aktivoituu automaattisesti, kun käyttäjä tekee toiminnon, joka edellyttää todentamista. Tällaisia toimintoja ovat esimerkiksi salasanojen kirjoittaminen. Todennus-valintaikkuna tulee näkyviin, kun sovellus pyytää käyttäjän todennusta. 
+			 </p>
+			
+			<p>Muita tilanteita, joita käsitellään samalla tavalla:</p>
+			
+			<ul>
+				<li>
+					älykortti päivitetään 
+  
+				<li>		
+					jokin toinen ohjelma pyytää sertifikaattia.
+				</li>
+			</ul>
+			
+			<p>Sen mukaan, mikä Web-selain on kyseessä, erilaisia toimintoja saatetaan käynnistä, kun käyttäjä yrittää käyttää suojattua sivustoa eli esimerkiksi kirjoittaa osoitekenttään osoitteen https://&lt;sivuston_osoite&gt;. </p>
+			
+			<p>Jos käytössä on Netscapen tai Mozillan Web-selain, järjestelmä esittää <span style="FONT-WEIGHT: bold">BankID PKCS#11</span> -kutsun.</p>
+			
+			<p>Tavallisesti (mutta ei aina) näyttöön tulee ensimmäinen valintaikkuna, josta digitaalinen sertifikaatti on valittava. Tämän jälkeen näyttöön tulee toinen valintaikkuna, jossa on kirjoitettava PIN-koodi.</p>
+		</a>
+
+		<a name="Signing_Electronic_Documents">
+			<h1>Sähköisten asiakirjojen allekirjoittaminen</h1>
+		
+			<p>Voit allekirjoittaa viesti-ikkunassa näkyvän sähköisen asiakirjan valitsemalla käytettävän tunnisteen/sertifikaatin, kirjoittamalla PIN-koodin ja napsauttamalla sitten Allekirjoita-painiketta. Jos et halua tehdä näin, valitse Peruuta. Allekirjoitettavat tiedot tulevat näkyviin allekirjoitusikkunaan, jos ne näytetään. Napsauta Näytä-painiketta, jos haluat nähdä allekirjoitettavat tiedot toisessa ikkunassa. Voit myös tallentaa tiedot napsauttamalla Tallenna-painiketta.</p>
+		</a>
+		
+		<a name="Web_Application_Login">
+			<h1>Web-sovellukseen kirjautuminen</h1>
+		
+			<p>Kun suojattu Web-palvelin pyytää työasemalta todennusta, käyttäjän on valittava todennussertifikaatti ja määritettävä PIN-koodi.</p>
+			
+			<p>Katso myös:</p>
+			
+			<p><a href="#User_authentication">Käyttäjien todennus</a></p>
+		</a></body></html>
+
+		<a name="Glossary">
+			<h1>Sanasto</h1>
+		
+			<h4 style="FONT-WEIGHT: normal; COLOR: #0000ff"><span style="FONT-WEIGHT: bold">Vastuuvapauslauseke</span> 
+			</h4>
+			
+			<p style="COLOR: #0000ff">Osa termeistä on peräisin RSA Security, Inc:ltä ja tietotekniikan sanastoja sisältäviltä Internet-sivustoilta, kuten http://www.techweb.com/encyclopedia/, http://www.webopaedia.com/ (Copyright, 2001. INT Media Group, Inc. Kaikki oikeudet pidätetään) ja http://www.computeruser.com/resources/dictionary/dictionary.html. 
+			 </p>
+			
+			<h5>API</h5>
+			
+			<p>Lyhenne sanoista "Application Program Interface" (sovellusohjelmaliittymä). API-liittymä määrittää ohjelmistokirjaston sovelluksille tarjoamat menetelmät. </p>
+			
+			<h5>Asiakkaan todennus</h5>
+			
+			<p>Menetelmä, jonka avulla voidaan varmistaa henkilöllisyys SSL-protokollaa käyttämällä. </p>
+			
+			<h5>Avaimen pituus</h5>
+			
+			<p>Viestien allekirjoittamiseen, salaamiseen ja salauksen purkamiseen käytettyjen RSA-avainten pituus. </p>
+			
+			<h5>Avain</h5>
+			
+			<p>Bittimerkkijono, jota käytetään usein salakirjoituksessa. Sen avulla ihmiset voivat salata tietoja ja purkaa niiden salauksen. </p>
+			
+			<h5>BankID-tunnusluku</h5>
+			
+			<p>Katso "PIN-koodi". </p>
+			
+			<h5>CA</h5>
+			
+			<p>Lyhenne sanoista "Certification Authority" (sertifikaatin myöntäjä). Tämä voi olla mikä tahansa luotettu hallintoelin, joka myöntää sertifikaatteja ja on valmis takaamaan sertifikaattien lähettäjän henkilöllisyyden tietyn avaimen avulla. Kyseessä voi olla esimerkiksi valtion hallinnoima virasto tai pankki. </p>
+			
+			<h5>CA-avain</h5>
+			
+			<p>CA:n luoma RSA-avainpari. </p>
+			
+			<h5>CA-sertifikaatti</h5>
+			
+			<p>Sertifikaatin myöntäjän eli CA:n julkisen avaimen sertifikaatti. </p>
+			
+			<h5>Digitaalinen allekirjoitus</h5>
+			
+			<p>Lähettäjän tunnistukseen käyttävä ainutkertainen digitaalinen koodi, joka voidaan liittää sähköisesti välitettyyn viestiin. </p>
+			
+			<h5>Digitaalinen henkilöllisyystunniste</h5>
+			
+			<p>Digitaalinen henkilöllisyystunniste on joko älykortti tai ohjelmistotunniste, jota voidaan käyttää käyttäjän henkilöllisyyden todistamiseen. </p>
+			
+			<h5>Digitaalinen sertifikaatti</h5>
+			
+			<p>Katso "Sertifikaatti". </p>
+			
+			<h5>DLL</h5>
+			
+			<p>Suoritettavia toimintoja tai tietoja sisältävä kirjasto, jota Windows-sovellukset voivat käyttää. Tällaisten tiedostojen tiedostotunniste on .DLL. </p>
+			
+			<h5>Dynamic Link Library</h5>
+			
+			<p>Katso "DLL". </p>
+			
+			<h5>HTTPS</h5>
+			
+			<p>Suojattujen verkkopalvelinten käyttämiseen käytetty protokolla. Kun URL-osoite alkaa HTTPS-etuliitteellä HTTP:n sijaan, viesti ohjataan suojattuun porttiin Internet-oletusportin sijaan. Istuntoa hallitaan tämän jälkeen suojatun protokollan avulla. </p>
+			
+			<h5>Julkinen avain</h5>
+			
+			<p>Avain, joka on kaikkien tiedossa. Salakirjoitusjärjestelmässä käytetään kahta avainta eli yksityistä ja julkista avainta. Salaus toimii siten, että esimerkiksi Jukka voi käyttää Leenan julkista avainta salatun sähköpostin lähettämiseen Leenalle. Leena voi purkaa viestin salauksen käyttämällä yksityistä avaintaan. </p>
+			
+			<h5>Kiistämättömyys</h5>
+			
+			<p>Digitaalisessa suojauksessa kiistämättömyys tarkoittaa suojausta, joka takaa sen, että maksu tai siirto on tapahtunut. Tapahtumaa ei voida kiistää virheellisesti digitaalisen allekirjoituksen käytön ansiosta. </p>
+			
+			<h5>Kortinlukija</h5>
+			
+			<p>Laite, jota käytetään älykorttien lukemiseen. </p>
+			
+			<h5>Kortti</h5>
+			
+			<p>Katso "Älykortti". </p>
+			
+			<h5>Ohjelmatunniste</h5>
+			
+			<p>Katso "Ohjelmistotunniste". </p>
+			
+			<h5>Ohjelmistotunniste</h5>
+			
+			<p>Tietokonetiedosto (ei älykortti), joka sisältää ainakin yhden RSA-avaimen ja sertifikaatin parin, joita käytetään tietojen salaamiseen ja digitaaliseen allekirjoittamiseen. Salauksen ja allekirjoituksen aikana on syötettävä PIN-koodi. BankID-ohjelmassa tiedostomuoto voi olla PKCS#12 tai sisäinen säilö.</p>
+			
+			<h5>PIN Unblocking Key -koodi</h5>
+			
+			<p>Katso "PUK-koodi". </p>
+			
+			<h5>PIN-koodi</h5>
+			
+			<p>Tämä on lyhenne sanoista "BankID Identification Number Code" (BankID-tunnusluku). Kun tunnistetta käytetään tietojen salaamiseen tai digitaaliseen allekirjoittamiseen, sinun on kirjoitettava PIN-koodi valintaikkunaan salauksen käynnistämiseksi tai digitaalisen sertifikaatin liittämiseksi tietoihin. 
+			 </p>
+			
+			<h5>PKCS #7</h5>
+			
+			<p>Lyhenne sanoista "Public Key Cryptography Standard Number 7" (julkisen avaimen salakirjoitusstandardi numero 7). Määrittää yleisen syntaksin viesteille, joissa on salakirjoitettuja osia (esimerkiksi digitaaliset allekirjoitukset ja digitaaliset kirjekuoret). (Määritelmä: "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, RSA Data Security, Inc:n divisioona, Security Dynamics -yritys.) </p>
+			
+			<h5>PKCS #11</h5>
+			
+			<p>Lyhenne sanoista "Public Key Cryptography Standard Number 11" (julkisen avaimen salakirjoitusstandardi numero 11). Määrittää yleisen API-liittymän laitteille (kuten älykorteille), joissa säilytetään salakirjoitustietoja ja suoritetaan salakirjoitustoimintoja. Täten se eristää sovelluksen salakirjoituslaitteen tiedoista ja tyypistä. (Määritelmä: "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, RSA Data Security, Inc:n divisioona, Security Dynamics -yritys.) </p>
+			
+			<h5>PKCS #12</h5>
+			
+			<p>Lyhenne sanoista "Public Key Cryptography Standard Number 12" (julkisen avaimen salakirjoitusstandardi numero 12). Määrittää henkilökohtaisten tunnistustietojen siirtosyntaksin, joka sisältää yksityisiä avaimia, sertifikaatteja, erilaisia salasanoja ja laajennuksia. Tätä standardia tukevat koneet, sovellukset, selaimet, Internet-kioskit ja vastaavat antavat käyttäjän tuoda, viedä ja käyttää yksittäisiä henkilökohtaisia henkilötietoja. (Määritelmä: "RSA Data Security, Inc. Public-Key Cryptography Standards (PKCS)". Copyright © 1996-1999 RSA Laboratories, RSA Data Security, Inc:n divisioona, Security Dynamics -yritys.) </p>
+			
+			<h5>PUK-koodi</h5>
+			
+			<p>Lyhenne sanoista "PIN Unblocking Key" (PIN-koodin eston torjunta-avain). Jos PIN-koodi on estetty liian monen yrityksen vuoksi, sen esto voidaan torjua PUK-koodin avulla (jos se on käytettävissä). 
+			 </p>
+			
+			<h5>Salakirjoitettu teksti</h5>
+			
+			<p>Tiedot, jotka on salattu ja joita ei voi lukea, ennen kuin niiden salaus puretaan avaimen avulla. </p>
+			
+			<h5>Salakirjoitus</h5>
+			
+			<p>Tietojen muuntaminen lukukelvottomaan muotoon (katso "Salaus"). Tiedot ovat luettavissa vain salatun avaimen avulla. Avain on tavallisesti tallennettu tunnisteeseen (katso myös "Tunniste") </p>
+			
+			<h5>Salauksen poistaminen</h5>
+			
+			<p>Salattujen tietojen muuntaminen takaisin alkuperäisiksi tiedoiksi salasanan tai avaimen avulla (katso myös "Salaus"). </p>
+			
+			<h5>Salaus</h5>
+			
+			<p>Tietojen muuntaminen salaiseksi koodiksi, joka voidaan purkaa (tai muuntaa takaisin alkuperäisiksi tiedoiksi) tai lukea vain käyttämällä salasanaa tai avainta (katso myös "Salauksen poistaminen"). </p>
+			
+			<h5>Sertifikaatin myöntäjä</h5>
+			
+			<p>Katso "CA". </p>
+			
+			<h5>Sertifikaatti</h5>
+			
+			<p>Sertifikaatti on eräänlainen digitaalinen henkilöllisyyskortti, joka sisältää määritetyn käyttäjän tunnistukseen käytettävän ainutlaatuisen koodin. Sen päätarkoitus on varmistaa, että viestiä lähettävä käyttäjä on varmasti sama henkilö, joksi hän on esittäytynyt. </p>
+			
+			<h5>Sisäinen säilö</h5>
+			
+			<p>Sisäinen säilö on luotettu säilö, joka tarjoaa tavallista tiedostoa paremman suojauksen. Ohjelmistotunnisteet tulisi tästä syystä tuoda luotettuun säilöön, ellei tavallisen tiedoston suurempaa joustavuutta tarvita esimerkiksi siirrettäessä ohjelmistotunnisteen tiedostoa kahden tietokoneen välillä.</p>
+			
+			<h5>sovellusohjelmaliittymä</h5>
+			
+			<p>Katso "API". </p>
+			
+			<h5>SSL-protokolla</h5>
+			
+			<p>Netscape Communications Corporation suunnitteli SSL-protokollan ja laati sen määritelmät tarjoamaan tietosuojauskerroksen sovellusprotokollien (kuten HTTP:n, Telnetin, NNTP:n tai FTP:n) ja TCP/IP:n välille. </p>
+			
+			<p>Lisätietoja on Netscapen "SSL-protokollan versiota 3.0" käsittelevissä tiedoissa. </p>
+			
+			<h5>Tunniste</h5>
+			
+			<p>Tunniste voi olla kortti (eli niin sanottu "älykortti") tai ohjelmistotiedosto (eli niin sanottu "ohjelmistotunniste"), joka sisältää RSA-avaimia ja sertifikaatteja, joita käytetään tietojen allekirjoittamiseen tai niiden salauksen poistamiseen. Salauksen ja allekirjoituksen aikana on tavallisesti syötettävä PIN-koodi. </p>
+			
+			<h5>Tuo</h5>
+			
+			<p>BankID:n tuontitoiminnon avulla voit tuoda digitaaliset PKCS#12-henkilöllisyystunnisteet sisäiseen säilöön. </p>
+			
+			<h5>Välimuisti</h5>
+			
+			<p>Tilapäinen tallennusalue usein tai äskettäin käsitellyille tiedoille. Selaimen suojauksen vuoksi avaimet tallennetaan "välimuistiin". Tämä tarkoittaa sitä, että avaimet, joiden avulla voit käsitellä suojattuja palvelimia, tallennetaan tilapäisesti muistiin helppoa hakua varten. </p>
+			
+			<h5>Vie</h5>
+			
+			<p>Vientitoiminnon avulla voit kopioida tunnisteen tiedostoon, jos haluat käyttää tunnistetta toisessa tietokoneessa tai varmuuskopioida tiedoston säilyttämistä varten.</p>
+			
+			<h5>Yksityinen avain</h5>
+			
+			<p>Salainen avain, joka on vain vastaanottajan tiedossa. Salakirjoitusjärjestelmässä käytetään kahta avainta eli yksityistä ja julkista avainta. Salaus toimii siten, että esimerkiksi Jukka voi käyttää Leenan julkista avainta salatun sähköpostin lähettämiseen Leenalle. Leena voi purkaa viestin salauksen käyttämällä yksityistä avaintaan. </p>
+            
+			<h5>Älykortin lukija</h5>
+			
+			<p>Laite, jota käytetään älykortin käsittelemiseen.</p>
+			
+			<h5>Älykortti</h5>
+			
+			<p>Pieni noin luottokortin kokoinen elektroninen laite, joka sisältää muistilla varustetun sisäisen sirun. Tämä laite sisältää RSA-avaimet ja sertifikaatit, joita tarvitaan todentamiseen suojatuissa Web-sivustoissa ja asiakirjojen sähköiseen allekirjoitukseen. </p>
+			
+		</a>
+		
+	</body>
+</html>
