@@ -5,6 +5,9 @@
 #
 
 INSTALL_DIR="/usr/local/lib"
+MOZILLA_PLUGINS_PATH=/usr/lib/mozilla/plugins
+FF2_PLUGINS_PATH=/usr/lib/firefox/plugins
+FF3_PLUGINS_PATH=/usr/lib/firefox-addons/plugins
 
 if [ ! $(id -u) = "0" ]; then
   echo "Error: Script not executed by root."
@@ -32,8 +35,9 @@ then
   rm -f /usr/local/bin/personal
   rm -f /usr/local/bin/persadm
   rm -f /usr/lib/xulrunner-addons/plugins/libplugins.so
-  rm -f /usr/lib/firefox/plugins/libplugins.so
-  rm -f /usr/lib/firefox-addons/plugins/libplugins.so
+  rm -f $FF2_PLUGINS_PATH/libplugins.so
+  rm -f $FF3_PLUGINS_PATH/libplugins.so
+  rm -f $MOZILLA_PLUGINS_PATH/libplugins.so
   rm -f /usr/share/applications/personal.desktop
   echo "Uninstallation complete."
 
@@ -151,17 +155,24 @@ then
     exit 1
   fi
 #Install plugin for FF3
-  if ((test -d /usr/lib/firefox-addons/plugins) && !(test -e /usr/lib/firefox-addons/plugins/libplugins.so)); then
-    ln -s $INSTALL_DIR/personal/libplugins.so /usr/lib/firefox-addons/plugins
+  if ((test -d $FF3_PLUGINS_PATH) && !(test -e $FF3_PLUGINS_PATH/libplugins.so)); then
+    ln -s $INSTALL_DIR/personal/libplugins.so $FF3_PLUGINS_PATH
     if [ $? -ne 0 ]; then
       echo "WARNING: Failed installing plugin for Firefox 3. Manually add symlink to libplugins.so in your Firefox 3 plugin directory if this browser is to be used."
     fi
   fi
 #Install plugins for FF2
-  if ((test -d /usr/lib/firefox/plugins) && !(test -e /usr/lib/firefox/plugins/libplugins.so)); then
-    ln -s $INSTALL_DIR/personal/libplugins.so /usr/lib/firefox/plugins
+  if ((test -d $FF2_PLUGINS_PATH) && !(test -e $FF2_PLUGINS_PATH/libplugins.so)); then
+    ln -s $INSTALL_DIR/personal/libplugins.so $FF2_PLUGINS_PATH
     if [ $? -ne 0 ]; then
       echo "WARNING: Failed installing plugin for Firefox 2. Manually add symlink to libplugins.so in your Firefox 2 plugin directory if this browser is to be used."
+    fi
+  fi
+#Install plugin for Firefox in Debian/LMDE
+  if ((test -d $MOZILLA_PLUGINS_PATH) && !(test -e $MOZILLA_PLUGINS_PATH/libplugins.so)); then
+    ln -s $INSTALL_DIR/personal/libplugins.so $MOZILLA_PLUGINS_PATH
+    if [ $? -ne 0 ]; then
+      echo "WARNING: Failed installing plugin for Mozilla. Manually add symlink to libplugins.so in your Mozilla plugin directory if this browser is to be used."
     fi
   fi
 
